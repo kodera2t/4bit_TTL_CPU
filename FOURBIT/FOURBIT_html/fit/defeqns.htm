@@ -1,0 +1,443 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$DEC_LED1_OBUF$0 <= ((NOT B7 AND LED1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B6 AND LED1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B7 AND NOT B6 AND B5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B7 AND NOT B6 AND B4 AND NOT XLXN_60)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B7 AND NOT B6 AND NOT B4 AND NOT XLXN_58));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$DEC_LED1_OBUF$1 <= (($OpTx$DEC_LED1_OBUF$0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND B7 AND NOT B6 AND NOT B4 AND NOT B5 AND XLXN_58));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$FX_DC$14 <= XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 XOR 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$OpTx$FX_DC$14 <= XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2;
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$XLXI_49/XLXN_39/XLXI_49/XLXN_39_D211__INV$129 <= ((NOT data1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DATA2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND B6 AND B4 AND NOT XLXN_125));
+</td></tr><tr><td>
+FDCPE_DATA2: FDCPE port map (DATA2,DATA2_D,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DATA2_D <= ((NOT B7 AND NOT data1 AND DATA2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B6 AND data1 AND NOT DATA2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B6 AND NOT data1 AND DATA2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT data1 AND DATA2 AND NOT B4)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT data1 AND DATA2 AND XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP33_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B1 AND B7 AND B6 AND B4 AND B5 AND NOT XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND B1 AND B7 AND B6 AND B4 AND NOT XLXN_64 AND NOT XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B1 AND B7 AND B6 AND B4 AND NOT XLXN_60 AND NOT XLXN_64 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND NOT B1 AND B7 AND B6 AND B4 AND NOT B5 AND XLXN_64 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B1 AND B7 AND B6 AND B4 AND NOT B5 AND NOT XLXN_60 AND XLXN_64 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND data1 AND NOT DATA2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (data1 AND NOT DATA2 AND NOT B4)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (data1 AND NOT DATA2 AND XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B1 AND B7 AND B6 AND B4 AND XLXN_60 AND XLXN_64 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_125));
+</td></tr><tr><td>
+FDCPE_DATA3: FDCPE port map (DATA3,DATA3_D,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DATA3_D <= $OpTx$XLXI_49/XLXN_39/XLXI_49/XLXN_39_D211__INV$129
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 XOR 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DATA3_D <= ((EXP46_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND DATA3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B6 AND DATA3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA3 AND NOT B4)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA3 AND XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B1 AND B7 AND B6 AND B2 AND B4 AND XLXN_64 AND XLXN_65 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B1 AND B7 AND B6 AND B2 AND B4 AND XLXN_60 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXN_65 AND NOT XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B7 AND B6 AND B2 AND B4 AND XLXN_60 AND XLXN_64 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXN_65 AND NOT XLXN_125));
+</td></tr><tr><td>
+FDCPE_DATA4: FDCPE port map (DATA4,DATA4_D,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DATA4_D <= XLXI_49/XLXN_38/XLXI_49/XLXN_38_D2
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 XOR 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DATA4_D <= ((EXP43_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA4 AND XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND B6 AND NOT B2 AND B4 AND B5 AND B3 AND NOT XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND B6 AND B4 AND B5 AND B3 AND NOT XLXN_125 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND B6 AND B2 AND B4 AND B5 AND NOT B3 AND NOT XLXN_125 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND B6 AND B4 AND B3 AND NOT XLXN_65 AND NOT XLXN_66 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_125 AND NOT XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND B6 AND NOT B2 AND B4 AND B3 AND NOT XLXN_66 AND NOT XLXN_125 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND DATA4)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B6 AND DATA4)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA4 AND NOT B4));
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+FDCPE_LED1: FDCPE port map (LED1,LED1_D,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LED1_D <= (($OpTx$DEC_LED1_OBUF$1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND B7 AND NOT B6 AND B4 AND NOT B5 AND XLXN_60));
+</td></tr><tr><td>
+FDCPE_LED2: FDCPE port map (LED2,LED2_D,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LED2_D <= ((B1 AND B7 AND NOT B6 AND B5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND B1 AND B7 AND NOT B6 AND NOT B4 AND NOT XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B1 AND B7 AND NOT B6 AND NOT B4 AND NOT XLXN_58 AND NOT XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (LED3_OBUF.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND B1 AND B7 AND NOT B6 AND B4 AND NOT XLXN_64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B1 AND B7 AND NOT B6 AND B4 AND NOT XLXN_60 AND NOT XLXN_64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND NOT B1 AND B7 AND NOT B6 AND NOT B4 AND NOT B5 AND XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B1 AND B7 AND NOT B6 AND B4 AND NOT B5 AND NOT XLXN_60 AND XLXN_64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B1 AND B7 AND NOT B6 AND NOT B4 AND NOT B5 AND NOT XLXN_58 AND XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND LED2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B6 AND LED2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B1 AND B7 AND NOT B6 AND B4 AND XLXN_60 AND XLXN_64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B1 AND B7 AND NOT B6 AND NOT B4 AND XLXN_58 AND XLXN_61));
+</td></tr><tr><td>
+FTCPE_LED3: FTCPE port map (LED3,LED3_T,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LED3_T <= ((B7 AND NOT B6 AND NOT LED3 AND $OpTx$FX_DC$14)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND LED3 AND NOT $OpTx$FX_DC$14));
+</td></tr><tr><td>
+</td></tr><tr><td>
+LED4 <= LED4_BUFR;
+</td></tr><tr><td>
+FDCPE_LED4_BUFR: FDCPE port map (LED4_BUFR,LED4_BUFR_D,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LED4_BUFR_D <= ((EXP22_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND B2 AND B5 AND NOT B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND B5 AND NOT B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND NOT B2 AND B4 AND B3 AND NOT XLXN_66 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND B4 AND B3 AND NOT XLXN_66 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND B4 AND NOT B3 AND NOT XLXN_66 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP25_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND B2 AND B4 AND NOT B3 AND NOT XLXN_66 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND B2 AND NOT B4 AND NOT B3 AND NOT XLXN_63 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND NOT B2 AND NOT B4 AND B3 AND NOT XLXN_63 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND NOT B4 AND B3 AND NOT XLXN_63 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND NOT B4 AND NOT B3 AND NOT XLXN_63 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND LED4_BUFR)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B6 AND LED4_BUFR)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND NOT B2 AND B5 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND B5 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D));
+</td></tr><tr><td>
+</td></tr><tr><td>
+TERM2 <= NOT TERM1;
+</td></tr><tr><td>
+</td></tr><tr><td>
+TERM3 <= TERM1;
+</td></tr><tr><td>
+</td></tr><tr><td>
+XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D <= ((NOT B7 AND NOT B2 AND NOT B5 AND XLXN_62)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B2 AND B4 AND NOT B5 AND XLXN_65)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B2 AND B5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND B2 AND NOT XLXN_62)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B2 AND NOT B4 AND NOT XLXN_62)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND B2 AND B4 AND NOT XLXN_65)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B2 AND NOT B4 AND NOT B5 AND XLXN_62));
+</td></tr><tr><td>
+</td></tr><tr><td>
+XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 <= ((B0 AND B1 AND NOT B7 AND NOT B5 AND XLXN_58)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B1 AND NOT B4 AND NOT B5 AND XLXN_58)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B1 AND B7 AND B4 AND NOT B5 AND XLXN_60)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B7 AND B4 AND NOT B5 AND XLXN_60 AND XLXN_64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B1 AND NOT B7 AND NOT B5 AND XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B1 AND NOT B4 AND NOT B5 AND XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND NOT B7 AND NOT B5 AND XLXN_58 AND XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND NOT B4 AND NOT B5 AND XLXN_58 AND XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B1 AND B7 AND B4 AND NOT B5 AND XLXN_64));
+</td></tr><tr><td>
+</td></tr><tr><td>
+XLXI_49/XLXN_38/XLXI_49/XLXN_38_D2 <= ((NOT B7 AND data1 AND DATA2 AND DATA3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B6 AND data1 AND DATA2 AND DATA3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (data1 AND DATA2 AND DATA3 AND NOT B4)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (data1 AND DATA2 AND DATA3 AND XLXN_125));
+</td></tr><tr><td>
+</td></tr><tr><td>
+XLXI_8/U5/M0/XLXI_8/U5/M0_D2 <= ((NOT B7 AND NOT B5 AND XLXN_63)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B4 AND NOT B5 AND XLXN_63)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND B4 AND NOT B5 AND XLXN_66));
+</td></tr><tr><td>
+FDCPE_XLXN_125: FDCPE port map (XLXN_125,XLXN_125_D,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXN_125_D <= ((EXP12_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND NOT B5 AND B3 AND XLXN_63)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B4 AND NOT B5 AND B3 AND XLXN_63)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND B4 AND NOT B5 AND B3 AND XLXN_66)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND B2 AND NOT B5 AND XLXN_63 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B2 AND NOT B4 AND NOT B5 AND XLXN_62 AND XLXN_63)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_8/U5/M0/XLXI_8/U5/M0_D2.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND NOT B5 AND B3 AND XLXN_62 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND NOT B5 AND XLXN_62 AND XLXN_63 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B2 AND NOT B4 AND NOT B5 AND XLXN_63 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B4 AND NOT B5 AND B3 AND XLXN_62 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B4 AND NOT B5 AND XLXN_62 AND XLXN_63 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B2 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND B2 AND B4 AND NOT B5 AND XLXN_66 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND B4 AND NOT B5 AND B3 AND XLXN_65 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND B4 AND NOT B5 AND XLXN_65 AND XLXN_66 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2));
+</td></tr><tr><td>
+FDCPE_XLXN_58: FDCPE port map (XLXN_58,XLXN_58_D,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXN_58_D <= ((B0 AND NOT B6 AND B5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND B6 AND XLXN_58)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND NOT B6 AND NOT B4 AND NOT XLXN_58)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND NOT B7 AND NOT B5 AND XLXN_58)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND B7 AND NOT B6 AND B4 AND NOT B5 AND XLXN_60)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND NOT B7 AND NOT XLXN_58)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B5 AND XLXN_58)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND NOT B4 AND NOT B5 AND XLXN_58)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B7 AND NOT B6 AND B4 AND NOT XLXN_60));
+</td></tr><tr><td>
+FDCPE_XLXN_60: FDCPE port map (XLXN_60,XLXN_60_D,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXN_60_D <= ((B0 AND B6 AND B5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND XLXN_60)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND NOT B7 AND NOT B5 AND XLXN_58)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B7 AND B6 AND B4 AND NOT XLXN_60)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND B6 AND NOT B4 AND NOT B5 AND XLXN_58)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND NOT B7 AND B5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND NOT B7 AND NOT XLXN_58)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B6 AND NOT B4 AND NOT XLXN_58)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND B7 AND B4 AND NOT B5 AND XLXN_60));
+</td></tr><tr><td>
+FDCPE_XLXN_61: FDCPE port map (XLXN_61,XLXN_61_D,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXN_61_D <= ((EXP18_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B1 AND NOT B7 AND B5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B1 AND NOT B6 AND B5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND B6 AND XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B1 AND NOT B7 AND XLXN_58 AND XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B1 AND NOT B4 AND XLXN_58 AND XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP21_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND B1 AND NOT B7 AND NOT XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B1 AND NOT B7 AND NOT XLXN_58 AND NOT XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND B1 AND NOT B6 AND NOT B4 AND NOT XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B1 AND NOT B6 AND NOT B4 AND NOT XLXN_58 AND NOT XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B1 AND NOT B7 AND NOT B5 AND NOT XLXN_58 AND XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND NOT B1 AND NOT B4 AND NOT B5 AND XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B1 AND NOT B4 AND NOT B5 AND NOT XLXN_58 AND XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND B1 AND B7 AND NOT B6 AND B4 AND NOT XLXN_64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B1 AND B7 AND NOT B6 AND B4 AND XLXN_60 AND XLXN_64));
+</td></tr><tr><td>
+FDCPE_XLXN_62: FDCPE port map (XLXN_62,XLXN_62_D,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXN_62_D <= ((NOT B7 AND $OpTx$FX_DC$14)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B6 AND $OpTx$FX_DC$14)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND B6 AND XLXN_62));
+</td></tr><tr><td>
+FDCPE_XLXN_63: FDCPE port map (XLXN_63,XLXN_63_D,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXN_63_D <= ((EXP35_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B6 AND B2 AND NOT B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND NOT XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B6 AND NOT B2 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND NOT XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B6 AND NOT B2 AND NOT B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B6 AND NOT B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B6 AND NOT B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND B2 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND NOT B2 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND NOT XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND NOT B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND B6 AND XLXN_63)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B6 AND B2 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B6 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B6 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_8/U5/M0/XLXI_8/U5/M0_D2));
+</td></tr><tr><td>
+FDCPE_XLXN_64: FDCPE port map (XLXN_64,XLXN_64_D,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXN_64_D <= ((EXP14_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B1 AND NOT B7 AND B5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B1 AND B6 AND B5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND XLXN_64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B1 AND NOT B7 AND XLXN_58 AND XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND NOT B1 AND B7 AND B4 AND NOT B5 AND XLXN_64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP17_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND B1 AND NOT B7 AND NOT XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B1 AND NOT B7 AND NOT XLXN_58 AND NOT XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND NOT B1 AND NOT B7 AND NOT B5 AND XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B1 AND B6 AND NOT B4 AND NOT XLXN_58 AND NOT XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B1 AND NOT B7 AND NOT B5 AND NOT XLXN_58 AND XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND B1 AND B6 AND NOT B4 AND NOT XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B1 AND B7 AND B4 AND XLXN_60 AND XLXN_64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B1 AND B6 AND NOT B4 AND XLXN_58 AND XLXN_61)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B1 AND B7 AND B4 AND NOT B5 AND NOT XLXN_60 AND XLXN_64));
+</td></tr><tr><td>
+FDCPE_XLXN_65: FDCPE port map (XLXN_65,XLXN_65_D,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXN_65_D <= ((NOT B7 AND $OpTx$FX_DC$14)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B6 AND $OpTx$FX_DC$14)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND XLXN_65));
+</td></tr><tr><td>
+FDCPE_XLXN_66: FDCPE port map (XLXN_66,XLXN_66_D,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXN_66_D <= ((B6 AND B2 AND NOT B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND NOT XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B6 AND NOT B2 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND NOT XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B6 AND NOT B2 AND NOT B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B6 AND NOT B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B6 AND NOT B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP28_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND B2 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND NOT B2 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND NOT XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B7 AND NOT B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B7 AND NOT B6 AND XLXN_66)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B6 AND B2 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B6 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_8/U5/M0/XLXI_8/U5/M0_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B6 AND B3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 AND XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_8/U5/M0/XLXI_8/U5/M0_D2));
+</td></tr><tr><td>
+FTCPE_data1: FTCPE port map (data1,data1_T,DFF_CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data1_T <= ((B0 AND B7 AND B6 AND NOT data1 AND B4 AND NOT B5 AND XLXN_60 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND B7 AND B6 AND data1 AND B4 AND NOT B5 AND XLXN_60 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B7 AND B6 AND data1 AND B4 AND B5 AND NOT XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (B0 AND B7 AND B6 AND data1 AND B4 AND NOT XLXN_60 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND B7 AND B6 AND NOT data1 AND B4 AND B5 AND NOT XLXN_125)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT B0 AND B7 AND B6 AND NOT data1 AND B4 AND NOT XLXN_60 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_125));
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

@@ -1,0 +1,1490 @@
+MDF Database:  version 1.0
+MDF_INFO | FOURBIT | XC95144XL-10-TQ100
+MACROCELL | 5 | 4 | data1_OBUF
+ATTRIBUTES | 4588322 | 0
+OUTPUTMC | 6 | 5 | 4 | 5 | 1 | 6 | 12 | 6 | 13 | 5 | 0 | 5 | 5
+INPUTS | 10 | B0  | B7  | B6  | data1  | B4  | XLXN_60  | XLXN_125  | B5  | DFF_CLK  | EXP34_.EXP
+INPUTMC | 4 | 5 | 4 | 6 | 15 | 0 | 0 | 5 | 5
+INPUTP | 6 | 112 | 98 | 102 | 104 | 103 | 90
+IMPORTS | 1 | 5 | 5
+EQ | 12 | 
+   !data1.T = B0 & B7 & B6 & data1 & B4 & B5 & !XLXN_125
+	# B0 & B7 & B6 & data1 & B4 & !XLXN_60 & 
+	!XLXN_125
+	# !B0 & B7 & B6 & !data1 & B4 & B5 & !XLXN_125
+	# !B0 & B7 & B6 & !data1 & B4 & !XLXN_60 & 
+	!XLXN_125
+;Imported pterms FB6_6
+	# B0 & B7 & B6 & !data1 & B4 & !B5 & XLXN_60 & 
+	!XLXN_125
+	# !B0 & B7 & B6 & data1 & B4 & !B5 & XLXN_60 & 
+	!XLXN_125;
+   data1.CLK = DFF_CLK;
+
+MACROCELL | 5 | 1 | DATA2_OBUF
+ATTRIBUTES | 8782626 | 0
+OUTPUTMC | 4 | 5 | 1 | 6 | 12 | 6 | 13 | 5 | 0
+INPUTS | 13 | B0  | B1  | B7  | B6  | B4  | XLXN_60  | XLXN_64  | XLXN_125  | data1  | DATA2  | EXP31_.EXP  | DFF_CLK  | EXP32_.EXP
+INPUTMC | 7 | 6 | 15 | 1 | 15 | 0 | 0 | 5 | 4 | 5 | 1 | 5 | 0 | 5 | 2
+INPUTP | 6 | 112 | 109 | 98 | 102 | 104 | 90
+IMPORTS | 2 | 5 | 0 | 5 | 2
+EQ | 24 | 
+   DATA2.D = !B7 & data1 & !DATA2
+	# data1 & !DATA2 & !B4
+	# data1 & !DATA2 & XLXN_125
+	# B0 & B1 & B7 & B6 & B4 & XLXN_60 & XLXN_64 & 
+	!XLXN_125
+;Imported pterms FB6_1
+	# !B7 & !data1 & DATA2
+	# !B6 & data1 & !DATA2
+	# !B6 & !data1 & DATA2
+	# !data1 & DATA2 & !B4
+	# !data1 & DATA2 & XLXN_125
+;Imported pterms FB6_3
+	# B1 & B7 & B6 & B4 & B5 & !XLXN_125
+	# !B0 & B1 & B7 & B6 & B4 & !XLXN_64 & !XLXN_125
+	# B1 & B7 & B6 & B4 & !XLXN_60 & !XLXN_64 & 
+	!XLXN_125
+	# !B0 & !B1 & B7 & B6 & B4 & !B5 & XLXN_64 & 
+	!XLXN_125
+	# !B1 & B7 & B6 & B4 & !B5 & !XLXN_60 & XLXN_64 & 
+	!XLXN_125
+;Imported pterms FB6_4
+	# B0 & !B1 & B7 & B6 & B4 & !B5 & XLXN_60 & 
+	!XLXN_64 & !XLXN_125;
+   DATA2.CLK = DFF_CLK;
+
+MACROCELL | 7 | 14 | DATA3_OBUF
+ATTRIBUTES | 8782626 | 0
+OUTPUTMC | 3 | 6 | 13 | 7 | 15 | 7 | 13
+INPUTS | 16 | $OpTx$XLXI_49/XLXN_39/XLXI_49/XLXN_39_D211__INV$129  | B0  | B1  | B7  | B6  | B2  | B4  | XLXN_60  | XLXN_65  | XLXN_125  | XLXN_64  | B3  | XLXN_66  | DFF_CLK  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2  | EXP45_.EXP
+INPUTMC | 8 | 6 | 12 | 6 | 15 | 4 | 13 | 0 | 0 | 1 | 15 | 4 | 1 | 7 | 9 | 7 | 15
+INPUTP | 8 | 112 | 109 | 98 | 102 | 107 | 104 | 105 | 90
+EXPORTS | 1 | 7 | 13
+IMPORTS | 1 | 7 | 15
+EQ | 46 | 
+   !DATA3.D = 
+	$OpTx$XLXI_49/XLXN_39/XLXI_49/XLXN_39_D211__INV$129
+	$ B0 & B1 & B7 & B6 & B2 & B4 & XLXN_60 & 
+	XLXN_65 & !XLXN_125
+	# B0 & B7 & B6 & B2 & B4 & XLXN_60 & XLXN_64 & 
+	XLXN_65 & !XLXN_125
+;Imported pterms FB8_16
+	# !B7 & DATA3
+	# !B6 & DATA3
+	# DATA3 & !B4
+	# DATA3 & XLXN_125
+	# B1 & B7 & B6 & B2 & B4 & XLXN_64 & XLXN_65 & 
+	!XLXN_125
+;Imported pterms FB8_17
+	# B7 & B6 & B2 & B4 & B5 & !XLXN_125
+	# !B0 & !B1 & B7 & B6 & B2 & B4 & !XLXN_65 & 
+	!XLXN_125
+	# !B0 & B7 & B6 & B2 & B4 & !XLXN_64 & !XLXN_65 & 
+	!XLXN_125
+	# !B1 & B7 & B6 & B2 & B4 & !XLXN_60 & !XLXN_65 & 
+	!XLXN_125
+	# !B1 & B7 & B6 & B2 & B4 & !XLXN_64 & !XLXN_65 & 
+	!XLXN_125
+;Imported pterms FB8_18
+	# B7 & B6 & B2 & B4 & !XLXN_60 & !XLXN_64 & 
+	!XLXN_65 & !XLXN_125
+	# !B0 & !B1 & B7 & B6 & !B2 & B4 & !B5 & XLXN_65 & 
+	!XLXN_125
+	# !B0 & B7 & B6 & !B2 & B4 & !B5 & !XLXN_64 & 
+	XLXN_65 & !XLXN_125
+	# !B1 & B7 & B6 & !B2 & B4 & !B5 & !XLXN_60 & 
+	XLXN_65 & !XLXN_125
+	# !B1 & B7 & B6 & !B2 & B4 & !B5 & !XLXN_64 & 
+	XLXN_65 & !XLXN_125
+;Imported pterms FB8_1
+	# B1 & B7 & B6 & !B2 & B4 & !B5 & XLXN_64 & 
+	!XLXN_65 & !XLXN_125
+	# B7 & B6 & !B2 & B4 & !B5 & !XLXN_60 & !XLXN_64 & 
+	XLXN_65 & !XLXN_125
+	# B0 & B1 & B7 & B6 & !B2 & B4 & !B5 & XLXN_60 & 
+	!XLXN_65 & !XLXN_125
+	# B0 & B7 & B6 & !B2 & B4 & !B5 & XLXN_60 & 
+	XLXN_64 & !XLXN_65 & !XLXN_125;
+   DATA3.CLK = DFF_CLK;
+    DATA3_OBUF.EXP  =  B7 & B6 & !B2 & B4 & B3 & !XLXN_66 & !XLXN_125 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+
+MACROCELL | 7 | 13 | DATA4_OBUF
+ATTRIBUTES | 8782626 | 0
+OUTPUTMC | 2 | 7 | 13 | 7 | 12
+INPUTS | 8 | XLXI_49/XLXN_38/XLXI_49/XLXN_38_D2  | DATA4  | B4  | B7  | B6  | EXP44_.EXP  | DATA3_OBUF.EXP  | DFF_CLK
+INPUTMC | 4 | 6 | 13 | 7 | 13 | 7 | 12 | 7 | 14
+INPUTP | 4 | 104 | 98 | 102 | 90
+IMPORTS | 2 | 7 | 12 | 7 | 14
+EQ | 39 | 
+   DATA4.D = XLXI_49/XLXN_38/XLXI_49/XLXN_38_D2
+	$ !B7 & DATA4
+	# !B6 & DATA4
+	# DATA4 & !B4
+;Imported pterms FB8_13
+	# DATA4 & XLXN_125
+	# B7 & B6 & !B2 & B4 & B5 & B3 & !XLXN_125
+	# B7 & B6 & B4 & B5 & B3 & !XLXN_125 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & B2 & B4 & B5 & !B3 & !XLXN_125 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & B4 & B3 & !XLXN_65 & !XLXN_66 & 
+	!XLXN_125 & !XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+;Imported pterms FB8_12
+	# B7 & B6 & B2 & B4 & !B3 & !XLXN_66 & !XLXN_125 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & !B2 & B4 & B3 & !XLXN_65 & !XLXN_66 & 
+	!XLXN_125
+	# B7 & B6 & B2 & B4 & !B5 & B3 & XLXN_65 & 
+	XLXN_66 & !XLXN_125
+	# B7 & B6 & B2 & B4 & !B5 & B3 & XLXN_66 & 
+	!XLXN_125 & XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & B4 & !B5 & B3 & XLXN_65 & XLXN_66 & 
+	!XLXN_125 & XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+;Imported pterms FB8_11
+	# B7 & B6 & B2 & B4 & !B5 & !B3 & XLXN_65 & 
+	!XLXN_66 & !XLXN_125
+	# B7 & B6 & !B2 & B4 & !B5 & !B3 & !XLXN_65 & 
+	XLXN_66 & !XLXN_125
+	# B7 & B6 & !B2 & B4 & !B5 & !B3 & XLXN_66 & 
+	!XLXN_125 & !XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & B4 & !B5 & !B3 & XLXN_65 & !XLXN_66 & 
+	!XLXN_125 & XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & B4 & !B5 & !B3 & !XLXN_65 & XLXN_66 & 
+	!XLXN_125 & !XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+;Imported pterms FB8_15
+	# B7 & B6 & !B2 & B4 & B3 & !XLXN_66 & !XLXN_125 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2;
+   DATA4.CLK = DFF_CLK;
+
+MACROCELL | 4 | 7 | LED1_OBUF
+ATTRIBUTES | 8782626 | 0
+OUTPUTMC | 2 | 4 | 15 | 4 | 8
+INPUTS | 11 | B1  | $OpTx$DEC_LED1_OBUF$1  | B7  | B6  | B5  | B0  | B4  | XLXN_61  | DFF_CLK  | XLXN_58  | $OpTx$FX_DC$14.EXP
+INPUTMC | 4 | 6 | 0 | 2 | 15 | 6 | 17 | 4 | 6
+INPUTP | 7 | 109 | 98 | 102 | 103 | 112 | 104 | 90
+EXPORTS | 1 | 4 | 8
+IMPORTS | 1 | 4 | 6
+EQ | 7 | 
+   LED1.D = $OpTx$DEC_LED1_OBUF$1
+;Imported pterms FB5_7
+	# !B0 & B7 & !B6 & B4 & !B5 & XLXN_60;
+   LED1.CLK = DFF_CLK;
+    LED1_OBUF.EXP  =  B1 & B7 & !B6 & B5
+	# !B0 & B1 & B7 & !B6 & !B4 & !XLXN_61
+	# B1 & B7 & !B6 & !B4 & !XLXN_58 & !XLXN_61
+
+MACROCELL | 4 | 8 | LED2_OBUF
+ATTRIBUTES | 8782626 | 0
+OUTPUTMC | 1 | 4 | 8
+INPUTS | 13 | B0  | B1  | B7  | B6  | B4  | XLXN_60  | XLXN_64  | XLXN_58  | XLXN_61  | LED2  | LED1_OBUF.EXP  | DFF_CLK  | EXP29_.EXP
+INPUTMC | 7 | 6 | 15 | 1 | 15 | 6 | 17 | 2 | 15 | 4 | 8 | 4 | 7 | 4 | 9
+INPUTP | 6 | 112 | 109 | 98 | 102 | 104 | 90
+IMPORTS | 2 | 4 | 7 | 4 | 9
+EQ | 21 | 
+   LED2.D = !B7 & LED2
+	# B6 & LED2
+	# B0 & B1 & B7 & !B6 & B4 & XLXN_60 & XLXN_64
+	# B0 & B1 & B7 & !B6 & !B4 & XLXN_58 & XLXN_61
+;Imported pterms FB5_8
+	# B1 & B7 & !B6 & B5
+	# !B0 & B1 & B7 & !B6 & !B4 & !XLXN_61
+	# B1 & B7 & !B6 & !B4 & !XLXN_58 & !XLXN_61
+;Imported pterms FB5_10
+	# !B0 & B1 & B7 & !B6 & B4 & !XLXN_64
+	# B1 & B7 & !B6 & B4 & !XLXN_60 & !XLXN_64
+	# !B0 & !B1 & B7 & !B6 & !B4 & !B5 & XLXN_61
+	# !B1 & B7 & !B6 & B4 & !B5 & !XLXN_60 & XLXN_64
+	# !B1 & B7 & !B6 & !B4 & !B5 & !XLXN_58 & XLXN_61
+;Imported pterms FB5_11
+	# !B0 & !B1 & B7 & !B6 & B4 & !B5 & XLXN_64
+	# B0 & !B1 & B7 & !B6 & B4 & !B5 & XLXN_60 & 
+	!XLXN_64
+	# B0 & !B1 & B7 & !B6 & !B4 & !B5 & XLXN_58 & 
+	!XLXN_61;
+   LED2.CLK = DFF_CLK;
+
+MACROCELL | 4 | 10 | LED3_OBUF
+ATTRIBUTES | 4588322 | 0
+OUTPUTMC | 3 | 4 | 10 | 4 | 11 | 4 | 9
+INPUTS | 14 | B7  | B6  | LED3  | $OpTx$FX_DC$14  | DFF_CLK  | B0  | B1  | B4  | B5  | XLXN_64  | XLXN_60  | XLXN_58  | XLXN_61  | _10_.EXP
+INPUTMC | 7 | 4 | 10 | 4 | 6 | 1 | 15 | 6 | 15 | 6 | 17 | 2 | 15 | 4 | 11
+INPUTP | 7 | 98 | 102 | 90 | 112 | 109 | 104 | 103
+EXPORTS | 1 | 4 | 9
+IMPORTS | 1 | 4 | 11
+EQ | 9 | 
+   LED3.T = B7 & !B6 & LED3 & !$OpTx$FX_DC$14
+;Imported pterms FB5_12
+	# B7 & !B6 & !LED3 & $OpTx$FX_DC$14;
+   LED3.CLK = DFF_CLK;
+    LED3_OBUF.EXP  =  !B0 & !B1 & B7 & !B6 & B4 & !B5 & XLXN_64
+	# B0 & !B1 & B7 & !B6 & B4 & !B5 & XLXN_60 & 
+	!XLXN_64
+	# B0 & !B1 & B7 & !B6 & !B4 & !B5 & XLXN_58 & 
+	!XLXN_61
+
+MACROCELL | 3 | 15 | LED4_BUFR.MC
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 2 | 3 | 15 | 4 | 11
+INPUTS | 11 | B6  | LED4_BUFR  | B7  | B5  | B3  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2  | XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D  | B2  | EXP23_.EXP  | EXP24_.EXP  | DFF_CLK
+INPUTMC | 5 | 3 | 15 | 7 | 9 | 4 | 17 | 3 | 14 | 3 | 16
+INPUTP | 6 | 102 | 98 | 103 | 105 | 107 | 90
+IMPORTS | 2 | 3 | 14 | 3 | 16
+EQ | 47 | 
+   LED4_BUFR.D = !B7 & LED4_BUFR
+	# B6 & LED4_BUFR
+	# B7 & !B6 & !B2 & B5 & B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & B5 & B3 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+;Imported pterms FB4_15
+	# B7 & !B6 & B2 & B5 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & B5 & !B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B2 & B4 & B3 & !XLXN_66 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & B4 & B3 & !XLXN_66 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & B4 & !B3 & !XLXN_66 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+;Imported pterms FB4_14
+	# B7 & !B6 & B2 & B4 & !B5 & B3 & XLXN_66 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & B4 & !B5 & B3 & XLXN_66 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & B4 & !B5 & !B3 & XLXN_66 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+;Imported pterms FB4_17
+	# B7 & !B6 & B2 & B4 & !B3 & !XLXN_66 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & B2 & !B4 & !B3 & !XLXN_63 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B2 & !B4 & B3 & !XLXN_63 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B4 & B3 & !XLXN_63 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B4 & !B3 & !XLXN_63 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+;Imported pterms FB4_18
+	# B7 & !B6 & B2 & !B4 & !B5 & B3 & XLXN_63 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B2 & B4 & !B5 & !B3 & XLXN_66 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B2 & !B4 & !B5 & !B3 & XLXN_63 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B4 & !B5 & B3 & XLXN_63 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B4 & !B5 & !B3 & XLXN_63 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D;
+   LED4_BUFR.CLK = DFF_CLK;
+
+MACROCELL | 6 | 17 | XLXN_58
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 20 | 6 | 0 | 4 | 8 | 6 | 17 | 6 | 15 | 2 | 15 | 1 | 15 | 7 | 9 | 4 | 15 | 1 | 14 | 1 | 16 | 1 | 17 | 2 | 14 | 2 | 16 | 2 | 17 | 4 | 7 | 4 | 9 | 4 | 10 | 6 | 14 | 6 | 16 | 7 | 8
+INPUTS | 9 | B0  | B4  | B5  | XLXN_58  | B7  | B6  | XLXN_60  | DFF_CLK  | EXP39_.EXP
+INPUTMC | 3 | 6 | 17 | 6 | 15 | 6 | 16
+INPUTP | 6 | 112 | 104 | 103 | 98 | 102 | 90
+IMPORTS | 1 | 6 | 16
+EQ | 11 | 
+   XLXN_58.D = B0 & !B7 & !XLXN_58
+	# B0 & B5 & XLXN_58
+	# !B0 & !B4 & !B5 & XLXN_58
+	# B0 & B7 & !B6 & B4 & !XLXN_60
+;Imported pterms FB7_17
+	# B0 & !B6 & B5
+	# B7 & B6 & XLXN_58
+	# B0 & !B6 & !B4 & !XLXN_58
+	# !B0 & !B7 & !B5 & XLXN_58
+	# !B0 & B7 & !B6 & B4 & !B5 & XLXN_60;
+   XLXN_58.CLK = DFF_CLK;
+
+MACROCELL | 6 | 15 | XLXN_60
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 25 | 5 | 4 | 5 | 1 | 7 | 14 | 4 | 6 | 4 | 8 | 6 | 17 | 6 | 15 | 2 | 15 | 1 | 15 | 7 | 8 | 4 | 15 | 1 | 13 | 1 | 17 | 2 | 13 | 2 | 17 | 4 | 9 | 4 | 10 | 5 | 2 | 5 | 3 | 5 | 5 | 6 | 14 | 6 | 16 | 7 | 0 | 7 | 16 | 7 | 17
+INPUTS | 9 | B0  | B7  | B4  | B5  | XLXN_60  | B6  | XLXN_58  | DFF_CLK  | EXP38_.EXP
+INPUTMC | 3 | 6 | 15 | 6 | 17 | 6 | 14
+INPUTP | 6 | 112 | 98 | 104 | 103 | 102 | 90
+IMPORTS | 1 | 6 | 14
+EQ | 11 | 
+   XLXN_60.D = B0 & !B7 & B5
+	# B0 & !B7 & !XLXN_58
+	# B0 & B6 & !B4 & !XLXN_58
+	# !B0 & B7 & B4 & !B5 & XLXN_60
+;Imported pterms FB7_15
+	# B0 & B6 & B5
+	# B7 & !B6 & XLXN_60
+	# !B0 & !B7 & !B5 & XLXN_58
+	# B0 & B7 & B6 & B4 & !XLXN_60
+	# !B0 & B6 & !B4 & !B5 & XLXN_58;
+   XLXN_60.CLK = DFF_CLK;
+
+MACROCELL | 2 | 15 | XLXN_61
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 14 | 4 | 8 | 2 | 15 | 1 | 15 | 7 | 9 | 1 | 14 | 1 | 16 | 1 | 17 | 2 | 13 | 2 | 14 | 2 | 16 | 2 | 17 | 4 | 7 | 4 | 9 | 4 | 10
+INPUTS | 13 | B0  | B1  | B7  | B6  | B4  | XLXN_64  | XLXN_60  | B5  | XLXN_58  | XLXN_61  | DFF_CLK  | EXP19_.EXP  | EXP20_.EXP
+INPUTMC | 6 | 1 | 15 | 6 | 15 | 6 | 17 | 2 | 15 | 2 | 14 | 2 | 16
+INPUTP | 7 | 112 | 109 | 98 | 102 | 104 | 103 | 90
+IMPORTS | 2 | 2 | 14 | 2 | 16
+EQ | 27 | 
+   XLXN_61.D = !B0 & !B1 & !B4 & !B5 & XLXN_61
+	# !B1 & !B4 & !B5 & !XLXN_58 & XLXN_61
+	# !B0 & B1 & B7 & !B6 & B4 & !XLXN_64
+	# B0 & B1 & B7 & !B6 & B4 & XLXN_60 & XLXN_64
+;Imported pterms FB3_15
+	# B1 & !B7 & B5
+	# B1 & !B6 & B5
+	# B7 & B6 & XLXN_61
+	# B0 & B1 & !B7 & XLXN_58 & XLXN_61
+	# B0 & B1 & !B4 & XLXN_58 & XLXN_61
+;Imported pterms FB3_14
+	# !B0 & !B1 & !B7 & !B5 & XLXN_61
+	# B1 & B7 & !B6 & B4 & !XLXN_60 & !XLXN_64
+;Imported pterms FB3_17
+	# !B0 & B1 & !B7 & !XLXN_61
+	# B1 & !B7 & !XLXN_58 & !XLXN_61
+	# !B0 & B1 & !B6 & !B4 & !XLXN_61
+	# B1 & !B6 & !B4 & !XLXN_58 & !XLXN_61
+	# !B1 & !B7 & !B5 & !XLXN_58 & XLXN_61
+;Imported pterms FB3_18
+	# B0 & !B1 & !B7 & !B5 & XLXN_58 & !XLXN_61
+	# B0 & !B1 & !B6 & !B4 & !B5 & XLXN_58 & !XLXN_61
+	# !B0 & !B1 & B7 & !B6 & B4 & !B5 & XLXN_64
+	# !B1 & B7 & !B6 & B4 & !B5 & !XLXN_60 & XLXN_64
+	# B0 & !B1 & B7 & !B6 & B4 & !B5 & XLXN_60 & 
+	!XLXN_64;
+   XLXN_61.CLK = DFF_CLK;
+
+MACROCELL | 4 | 14 | XLXN_62
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 7 | 4 | 14 | 4 | 17 | 0 | 1 | 0 | 2 | 0 | 16 | 0 | 17 | 4 | 16
+INPUTS | 5 | B6  | $OpTx$FX_DC$14  | B7  | XLXN_62  | DFF_CLK
+INPUTMC | 2 | 4 | 6 | 4 | 14
+INPUTP | 3 | 102 | 98 | 90
+EQ | 4 | 
+   XLXN_62.D = !B7 & $OpTx$FX_DC$14
+	# !B6 & $OpTx$FX_DC$14
+	# B7 & B6 & XLXN_62;
+   XLXN_62.CLK = DFF_CLK;
+
+MACROCELL | 5 | 16 | XLXN_63
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 6 | 0 | 17 | 5 | 16 | 0 | 16 | 0 | 1 | 3 | 16 | 3 | 17
+INPUTS | 11 | B7  | B6  | XLXN_63  | B3  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2  | XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D  | XLXI_8/U5/M0/XLXI_8/U5/M0_D2  | B2  | DFF_CLK  | EXP36_.EXP  | EXP37_.EXP
+INPUTMC | 6 | 5 | 16 | 7 | 9 | 4 | 17 | 0 | 16 | 5 | 15 | 5 | 17
+INPUTP | 5 | 98 | 102 | 105 | 107 | 90
+IMPORTS | 2 | 5 | 15 | 5 | 17
+EQ | 45 | 
+   XLXN_63.D = B7 & B6 & XLXN_63
+	# !B6 & B2 & B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B6 & B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B6 & B3 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	!XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+;Imported pterms FB6_16
+	# !B6 & B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B6 & !B2 & B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B6 & !B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B6 & !B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	!XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B6 & !B3 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+;Imported pterms FB6_15
+	# !B7 & B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	!XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+;Imported pterms FB6_18
+	# !B7 & B2 & B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B2 & B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & B3 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	!XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B3 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	XLXI_8/U5/M0/XLXI_8/U5/M0_D2;
+   XLXN_63.CLK = DFF_CLK;
+
+MACROCELL | 1 | 15 | XLXN_64
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 20 | 5 | 1 | 7 | 14 | 4 | 8 | 2 | 15 | 1 | 15 | 7 | 9 | 1 | 13 | 1 | 14 | 1 | 17 | 2 | 13 | 2 | 17 | 4 | 9 | 4 | 10 | 5 | 2 | 5 | 3 | 7 | 0 | 7 | 8 | 7 | 15 | 7 | 16 | 7 | 17
+INPUTS | 13 | B0  | B1  | B6  | B4  | XLXN_61  | B7  | B5  | XLXN_60  | XLXN_64  | XLXN_58  | DFF_CLK  | EXP15_.EXP  | EXP16_.EXP
+INPUTMC | 6 | 2 | 15 | 6 | 15 | 1 | 15 | 6 | 17 | 1 | 14 | 1 | 16
+INPUTP | 7 | 112 | 109 | 102 | 104 | 98 | 103 | 90
+IMPORTS | 2 | 1 | 14 | 1 | 16
+EQ | 27 | 
+   XLXN_64.D = !B0 & B1 & B6 & !B4 & !XLXN_61
+	# B0 & B1 & B7 & B4 & XLXN_60 & XLXN_64
+	# B0 & B1 & B6 & !B4 & XLXN_58 & XLXN_61
+	# !B1 & B7 & B4 & !B5 & !XLXN_60 & XLXN_64
+;Imported pterms FB2_15
+	# B1 & !B7 & B5
+	# B1 & B6 & B5
+	# B7 & !B6 & XLXN_64
+	# B0 & B1 & !B7 & XLXN_58 & XLXN_61
+	# !B0 & !B1 & B7 & B4 & !B5 & XLXN_64
+;Imported pterms FB2_14
+	# !B0 & B1 & B7 & B6 & B4 & !XLXN_64
+	# B1 & B7 & B6 & B4 & !XLXN_60 & !XLXN_64
+;Imported pterms FB2_17
+	# !B0 & B1 & !B7 & !XLXN_61
+	# B1 & !B7 & !XLXN_58 & !XLXN_61
+	# !B0 & !B1 & !B7 & !B5 & XLXN_61
+	# B1 & B6 & !B4 & !XLXN_58 & !XLXN_61
+	# !B1 & !B7 & !B5 & !XLXN_58 & XLXN_61
+;Imported pterms FB2_18
+	# B0 & !B1 & !B7 & !B5 & XLXN_58 & !XLXN_61
+	# !B0 & !B1 & B6 & !B4 & !B5 & XLXN_61
+	# !B1 & B6 & !B4 & !B5 & !XLXN_58 & XLXN_61
+	# B0 & !B1 & B6 & !B4 & !B5 & XLXN_58 & !XLXN_61
+	# B0 & !B1 & B7 & B6 & B4 & !B5 & XLXN_60 & 
+	!XLXN_64;
+   XLXN_64.CLK = DFF_CLK;
+
+MACROCELL | 4 | 13 | XLXN_65
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 13 | 7 | 14 | 7 | 12 | 4 | 13 | 0 | 0 | 4 | 17 | 0 | 2 | 4 | 16 | 7 | 0 | 7 | 10 | 7 | 11 | 7 | 15 | 7 | 16 | 7 | 17
+INPUTS | 5 | B6  | $OpTx$FX_DC$14  | B7  | XLXN_65  | DFF_CLK
+INPUTMC | 2 | 4 | 6 | 4 | 13
+INPUTP | 3 | 102 | 98 | 90
+EQ | 4 | 
+   XLXN_65.D = !B7 & $OpTx$FX_DC$14
+	# B6 & $OpTx$FX_DC$14
+	# B7 & !B6 & XLXN_65;
+   XLXN_65.CLK = DFF_CLK;
+
+MACROCELL | 4 | 1 | XLXN_66
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 13 | 7 | 12 | 3 | 14 | 4 | 1 | 0 | 0 | 0 | 16 | 0 | 1 | 0 | 2 | 3 | 13 | 3 | 16 | 3 | 17 | 7 | 10 | 7 | 11 | 7 | 14
+INPUTS | 11 | B7  | B6  | XLXN_66  | B3  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2  | XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D  | XLXI_8/U5/M0/XLXI_8/U5/M0_D2  | B2  | DFF_CLK  | EXP26_.EXP  | EXP27_.EXP
+INPUTMC | 6 | 4 | 1 | 7 | 9 | 4 | 17 | 0 | 16 | 4 | 0 | 4 | 2
+INPUTP | 5 | 98 | 102 | 105 | 107 | 90
+IMPORTS | 2 | 4 | 0 | 4 | 2
+EQ | 45 | 
+   XLXN_66.D = B7 & !B6 & XLXN_66
+	# B6 & B2 & B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# B6 & B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# B6 & B3 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	!XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+;Imported pterms FB5_1
+	# B6 & B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# B6 & !B2 & B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# B6 & !B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# B6 & !B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	!XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# B6 & !B3 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+;Imported pterms FB5_3
+	# !B7 & B2 & B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B2 & B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & B3 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	!XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B3 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+;Imported pterms FB5_4
+	# !B7 & B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	!XLXI_8/U5/M0/XLXI_8/U5/M0_D2;
+   XLXN_66.CLK = DFF_CLK;
+
+MACROCELL | 0 | 0 | XLXN_125
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 16 | 5 | 4 | 5 | 1 | 7 | 14 | 7 | 12 | 6 | 12 | 6 | 13 | 5 | 0 | 5 | 2 | 5 | 3 | 5 | 5 | 7 | 0 | 7 | 10 | 7 | 11 | 7 | 15 | 7 | 16 | 7 | 17
+INPUTS | 11 | B7  | B4  | B5  | XLXN_65  | XLXN_66  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2  | B3  | B2  | EXP11_.EXP  | EXP13_.EXP  | DFF_CLK
+INPUTMC | 5 | 4 | 13 | 4 | 1 | 7 | 9 | 0 | 1 | 0 | 17
+INPUTP | 6 | 98 | 104 | 103 | 105 | 107 | 90
+IMPORTS | 2 | 0 | 1 | 0 | 17
+EQ | 34 | 
+   XLXN_125.D = B2 & B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B2 & B4 & !B5 & XLXN_66 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B4 & !B5 & B3 & XLXN_65 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B4 & !B5 & XLXN_65 & XLXN_66 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+;Imported pterms FB1_2
+	# !B7 & !B5 & B3 & XLXN_63
+	# !B4 & !B5 & B3 & XLXN_63
+	# B7 & B4 & !B5 & B3 & XLXN_66
+	# !B7 & B2 & !B5 & XLXN_63 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B2 & !B4 & !B5 & XLXN_62 & XLXN_63
+;Imported pterms FB1_3
+	# !B7 & B2 & !B5 & B3 & XLXN_62
+	# B2 & !B4 & !B5 & B3 & XLXN_62
+	# B7 & B2 & B4 & !B5 & B3 & XLXN_65
+	# B7 & B2 & B4 & !B5 & XLXN_65 & XLXN_66
+;Imported pterms FB1_18
+	# !B7 & !B5 & B3 & XLXN_62 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# !B7 & !B5 & XLXN_62 & XLXN_63 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B2 & !B4 & !B5 & XLXN_63 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# !B4 & !B5 & B3 & XLXN_62 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# !B4 & !B5 & XLXN_62 & XLXN_63 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+;Imported pterms FB1_17
+	# !B7 & B2 & !B5 & XLXN_62 & XLXN_63;
+   XLXN_125.CLK = DFF_CLK;
+
+MACROCELL | 6 | 5 | TERM2_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | TERM1
+INPUTP | 1 | 82
+EQ | 1 | 
+   TERM2 = !TERM1;
+
+MACROCELL | 6 | 7 | TERM3_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | TERM1
+INPUTP | 1 | 82
+EQ | 1 | 
+   TERM3 = TERM1;
+
+MACROCELL | 6 | 12 | $OpTx$XLXI_49/XLXN_39/XLXI_49/XLXN_39_D211__INV$129
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 7 | 14
+INPUTS | 6 | data1  | DATA2  | B7  | B6  | B4  | XLXN_125
+INPUTMC | 3 | 5 | 4 | 5 | 1 | 0 | 0
+INPUTP | 3 | 98 | 102 | 104
+EQ | 3 | 
+   $OpTx$XLXI_49/XLXN_39/XLXI_49/XLXN_39_D211__INV$129 = !data1
+	# !DATA2
+	# B7 & B6 & B4 & !XLXN_125;
+
+MACROCELL | 6 | 13 | XLXI_49/XLXN_38/XLXI_49/XLXN_38_D2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 7 | 13
+INPUTS | 7 | data1  | DATA2  | DATA3  | B4  | B7  | B6  | XLXN_125
+INPUTMC | 4 | 5 | 4 | 5 | 1 | 7 | 14 | 0 | 0
+INPUTP | 3 | 104 | 98 | 102
+EQ | 4 | 
+   XLXI_49/XLXN_38/XLXI_49/XLXN_38_D2 = !B7 & data1 & DATA2 & DATA3
+	# !B6 & data1 & DATA2 & DATA3
+	# data1 & DATA2 & DATA3 & !B4
+	# data1 & DATA2 & DATA3 & XLXN_125;
+
+MACROCELL | 7 | 9 | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 21 | 7 | 12 | 3 | 15 | 5 | 16 | 4 | 1 | 0 | 0 | 4 | 6 | 0 | 1 | 0 | 17 | 3 | 13 | 3 | 14 | 3 | 16 | 3 | 17 | 4 | 0 | 4 | 2 | 4 | 3 | 5 | 14 | 5 | 15 | 5 | 17 | 7 | 10 | 7 | 11 | 7 | 14
+INPUTS | 9 | B1  | B4  | B5  | XLXN_61  | B7  | XLXN_64  | B0  | XLXN_58  | EXP41_.EXP
+INPUTMC | 4 | 2 | 15 | 1 | 15 | 6 | 17 | 7 | 8
+INPUTP | 5 | 109 | 104 | 103 | 98 | 112
+IMPORTS | 1 | 7 | 8
+EQ | 10 | 
+   XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 = B1 & !B7 & !B5 & XLXN_61
+	# B1 & !B4 & !B5 & XLXN_61
+	# B0 & !B7 & !B5 & XLXN_58 & XLXN_61
+	# B0 & !B4 & !B5 & XLXN_58 & XLXN_61
+	# B1 & B7 & B4 & !B5 & XLXN_64
+;Imported pterms FB8_9
+	# B0 & B1 & !B7 & !B5 & XLXN_58
+	# B0 & B1 & !B4 & !B5 & XLXN_58
+	# B0 & B1 & B7 & B4 & !B5 & XLXN_60
+	# B0 & B7 & B4 & !B5 & XLXN_60 & XLXN_64;
+
+MACROCELL | 4 | 6 | $OpTx$FX_DC$14
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 5 | 4 | 10 | 4 | 14 | 4 | 13 | 4 | 11 | 4 | 7
+INPUTS | 8 | XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2  | B0  | B7  | B6  | B4  | B5  | XLXN_60
+INPUTMC | 3 | 4 | 17 | 7 | 9 | 6 | 15
+INPUTP | 5 | 112 | 98 | 102 | 104 | 103
+EXPORTS | 1 | 4 | 7
+EQ | 3 | 
+   $OpTx$FX_DC$14 = XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	$ XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2;
+    $OpTx$FX_DC$14.EXP  =  !B0 & B7 & !B6 & B4 & !B5 & XLXN_60
+
+MACROCELL | 4 | 17 | XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 14 | 3 | 15 | 5 | 16 | 4 | 1 | 4 | 6 | 3 | 13 | 3 | 14 | 3 | 16 | 3 | 17 | 4 | 0 | 4 | 2 | 4 | 3 | 5 | 14 | 5 | 15 | 5 | 17
+INPUTS | 7 | B2  | B5  | B4  | XLXN_62  | B7  | XLXN_65  | EXP30_.EXP
+INPUTMC | 3 | 4 | 14 | 4 | 13 | 4 | 16
+INPUTP | 4 | 107 | 103 | 104 | 98
+IMPORTS | 1 | 4 | 16
+EQ | 8 | 
+   XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D = B2 & B5
+	# !B7 & B2 & !XLXN_62
+	# B2 & !B4 & !XLXN_62
+	# B7 & B2 & B4 & !XLXN_65
+	# !B2 & !B4 & !B5 & XLXN_62
+;Imported pterms FB5_17
+	# !B7 & !B2 & !B5 & XLXN_62
+	# B7 & !B2 & B4 & !B5 & XLXN_65;
+
+MACROCELL | 0 | 16 | XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 9 | 5 | 16 | 4 | 1 | 4 | 0 | 4 | 2 | 4 | 3 | 5 | 14 | 5 | 15 | 5 | 17 | 0 | 17
+INPUTS | 7 | B4  | B5  | XLXN_63  | B7  | XLXN_66  | B2  | XLXN_62
+INPUTMC | 3 | 5 | 16 | 4 | 1 | 4 | 14
+INPUTP | 4 | 104 | 103 | 98 | 107
+EXPORTS | 1 | 0 | 17
+EQ | 4 | 
+   XLXI_8/U5/M0/XLXI_8/U5/M0_D2 = !B7 & !B5 & XLXN_63
+	# !B4 & !B5 & XLXN_63
+	# B7 & B4 & !B5 & XLXN_66;
+    XLXI_8/U5/M0/XLXI_8/U5/M0_D2.EXP  =  !B7 & B2 & !B5 & XLXN_62 & XLXN_63
+
+MACROCELL | 4 | 15 | $OpTx$DEC_LED1_OBUF$0
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 6 | 0
+INPUTS | 8 | B7  | LED1  | B6  | B0  | B5  | B4  | XLXN_58  | XLXN_60
+INPUTMC | 3 | 4 | 7 | 6 | 17 | 6 | 15
+INPUTP | 5 | 98 | 102 | 112 | 103 | 104
+EQ | 5 | 
+   $OpTx$DEC_LED1_OBUF$0 = !B7 & LED1
+	# B6 & LED1
+	# B0 & B7 & !B6 & B5
+	# B0 & B7 & !B6 & B4 & !XLXN_60
+	# B0 & B7 & !B6 & !B4 & !XLXN_58;
+
+MACROCELL | 6 | 0 | $OpTx$DEC_LED1_OBUF$1
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 4 | 7
+INPUTS | 7 | $OpTx$DEC_LED1_OBUF$0  | B0  | B7  | B6  | B4  | B5  | XLXN_58
+INPUTMC | 2 | 4 | 15 | 6 | 17
+INPUTP | 5 | 112 | 98 | 102 | 104 | 103
+EQ | 2 | 
+   $OpTx$DEC_LED1_OBUF$1 = $OpTx$DEC_LED1_OBUF$0
+	# !B0 & B7 & !B6 & !B4 & !B5 & XLXN_58;
+
+MACROCELL | 4 | 11 | _10_
+ATTRIBUTES | 264962 | 0
+OUTPUTMC | 1 | 4 | 10
+INPUTS | 5 | LED4_BUFR  | B7  | B6  | LED3  | $OpTx$FX_DC$14
+INPUTMC | 3 | 3 | 15 | 4 | 10 | 4 | 6
+INPUTP | 2 | 98 | 102
+EXPORTS | 1 | 4 | 10
+EQ | 2 | 
+   LED4 = LED4_BUFR;
+    _10_.EXP  =  B7 & !B6 & !LED3 & $OpTx$FX_DC$14
+
+MACROCELL | 0 | 1 | EXP11_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 0
+INPUTS | 10 | B7  | B5  | B3  | XLXN_63  | B4  | XLXN_66  | B2  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2  | XLXN_62  | EXP12_.EXP
+INPUTMC | 5 | 5 | 16 | 4 | 1 | 7 | 9 | 4 | 14 | 0 | 2
+INPUTP | 5 | 98 | 103 | 105 | 104 | 107
+EXPORTS | 1 | 0 | 0
+IMPORTS | 1 | 0 | 2
+EQ | 11 | 
+       EXP11_.EXP  =  !B7 & !B5 & B3 & XLXN_63
+	# !B4 & !B5 & B3 & XLXN_63
+	# B7 & B4 & !B5 & B3 & XLXN_66
+	# !B7 & B2 & !B5 & XLXN_63 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B2 & !B4 & !B5 & XLXN_62 & XLXN_63
+;Imported pterms FB1_3
+	# !B7 & B2 & !B5 & B3 & XLXN_62
+	# B2 & !B4 & !B5 & B3 & XLXN_62
+	# B7 & B2 & B4 & !B5 & B3 & XLXN_65
+	# B7 & B2 & B4 & !B5 & XLXN_65 & XLXN_66
+
+MACROCELL | 0 | 2 | EXP12_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 1
+INPUTS | 8 | B7  | B2  | B5  | B3  | XLXN_62  | B4  | XLXN_65  | XLXN_66
+INPUTMC | 3 | 4 | 14 | 4 | 13 | 4 | 1
+INPUTP | 5 | 98 | 107 | 103 | 105 | 104
+EXPORTS | 1 | 0 | 1
+EQ | 4 | 
+       EXP12_.EXP  =  !B7 & B2 & !B5 & B3 & XLXN_62
+	# B2 & !B4 & !B5 & B3 & XLXN_62
+	# B7 & B2 & B4 & !B5 & B3 & XLXN_65
+	# B7 & B2 & B4 & !B5 & XLXN_65 & XLXN_66
+
+MACROCELL | 0 | 17 | EXP13_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 0
+INPUTS | 9 | B7  | B5  | B3  | XLXN_62  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2  | XLXN_63  | B2  | B4  | XLXI_8/U5/M0/XLXI_8/U5/M0_D2.EXP
+INPUTMC | 4 | 4 | 14 | 7 | 9 | 5 | 16 | 0 | 16
+INPUTP | 5 | 98 | 103 | 105 | 107 | 104
+EXPORTS | 1 | 0 | 0
+IMPORTS | 1 | 0 | 16
+EQ | 12 | 
+       EXP13_.EXP  =  !B7 & !B5 & B3 & XLXN_62 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# !B7 & !B5 & XLXN_62 & XLXN_63 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B2 & !B4 & !B5 & XLXN_63 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# !B4 & !B5 & B3 & XLXN_62 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# !B4 & !B5 & XLXN_62 & XLXN_63 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+;Imported pterms FB1_17
+	# !B7 & B2 & !B5 & XLXN_62 & XLXN_63
+
+MACROCELL | 1 | 13 | EXP14_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 14
+INPUTS | 7 | B0  | B1  | B7  | B6  | B4  | XLXN_64  | XLXN_60
+INPUTMC | 2 | 1 | 15 | 6 | 15
+INPUTP | 5 | 112 | 109 | 98 | 102 | 104
+EXPORTS | 1 | 1 | 14
+EQ | 2 | 
+       EXP14_.EXP  =  !B0 & B1 & B7 & B6 & B4 & !XLXN_64
+	# B1 & B7 & B6 & B4 & !XLXN_60 & !XLXN_64
+
+MACROCELL | 1 | 14 | EXP15_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 15
+INPUTS | 10 | B1  | B7  | B5  | B6  | XLXN_64  | B0  | XLXN_58  | XLXN_61  | B4  | EXP14_.EXP
+INPUTMC | 4 | 1 | 15 | 6 | 17 | 2 | 15 | 1 | 13
+INPUTP | 6 | 109 | 98 | 103 | 102 | 112 | 104
+EXPORTS | 1 | 1 | 15
+IMPORTS | 1 | 1 | 13
+EQ | 8 | 
+       EXP15_.EXP  =  B1 & !B7 & B5
+	# B1 & B6 & B5
+	# B7 & !B6 & XLXN_64
+	# B0 & B1 & !B7 & XLXN_58 & XLXN_61
+	# !B0 & !B1 & B7 & B4 & !B5 & XLXN_64
+;Imported pterms FB2_14
+	# !B0 & B1 & B7 & B6 & B4 & !XLXN_64
+	# B1 & B7 & B6 & B4 & !XLXN_60 & !XLXN_64
+
+MACROCELL | 1 | 16 | EXP16_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 15
+INPUTS | 9 | B0  | B1  | B7  | XLXN_61  | XLXN_58  | B5  | B6  | B4  | EXP17_.EXP
+INPUTMC | 3 | 2 | 15 | 6 | 17 | 1 | 17
+INPUTP | 6 | 112 | 109 | 98 | 103 | 102 | 104
+EXPORTS | 1 | 1 | 15
+IMPORTS | 1 | 1 | 17
+EQ | 12 | 
+       EXP16_.EXP  =  !B0 & B1 & !B7 & !XLXN_61
+	# B1 & !B7 & !XLXN_58 & !XLXN_61
+	# !B0 & !B1 & !B7 & !B5 & XLXN_61
+	# B1 & B6 & !B4 & !XLXN_58 & !XLXN_61
+	# !B1 & !B7 & !B5 & !XLXN_58 & XLXN_61
+;Imported pterms FB2_18
+	# B0 & !B1 & !B7 & !B5 & XLXN_58 & !XLXN_61
+	# !B0 & !B1 & B6 & !B4 & !B5 & XLXN_61
+	# !B1 & B6 & !B4 & !B5 & !XLXN_58 & XLXN_61
+	# B0 & !B1 & B6 & !B4 & !B5 & XLXN_58 & !XLXN_61
+	# B0 & !B1 & B7 & B6 & B4 & !B5 & XLXN_60 & 
+	!XLXN_64
+
+MACROCELL | 1 | 17 | EXP17_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 16
+INPUTS | 10 | B0  | B1  | B7  | B5  | XLXN_58  | XLXN_61  | B6  | B4  | XLXN_60  | XLXN_64
+INPUTMC | 4 | 6 | 17 | 2 | 15 | 6 | 15 | 1 | 15
+INPUTP | 6 | 112 | 109 | 98 | 103 | 102 | 104
+EXPORTS | 1 | 1 | 16
+EQ | 6 | 
+       EXP17_.EXP  =  B0 & !B1 & !B7 & !B5 & XLXN_58 & !XLXN_61
+	# !B0 & !B1 & B6 & !B4 & !B5 & XLXN_61
+	# !B1 & B6 & !B4 & !B5 & !XLXN_58 & XLXN_61
+	# B0 & !B1 & B6 & !B4 & !B5 & XLXN_58 & !XLXN_61
+	# B0 & !B1 & B7 & B6 & B4 & !B5 & XLXN_60 & 
+	!XLXN_64
+
+MACROCELL | 2 | 13 | EXP18_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 14
+INPUTS | 9 | B0  | B1  | B7  | B5  | XLXN_61  | B6  | B4  | XLXN_60  | XLXN_64
+INPUTMC | 3 | 2 | 15 | 6 | 15 | 1 | 15
+INPUTP | 6 | 112 | 109 | 98 | 103 | 102 | 104
+EXPORTS | 1 | 2 | 14
+EQ | 2 | 
+       EXP18_.EXP  =  !B0 & !B1 & !B7 & !B5 & XLXN_61
+	# B1 & B7 & !B6 & B4 & !XLXN_60 & !XLXN_64
+
+MACROCELL | 2 | 14 | EXP19_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 15
+INPUTS | 9 | B1  | B7  | B5  | B6  | XLXN_61  | B0  | XLXN_58  | B4  | EXP18_.EXP
+INPUTMC | 3 | 2 | 15 | 6 | 17 | 2 | 13
+INPUTP | 6 | 109 | 98 | 103 | 102 | 112 | 104
+EXPORTS | 1 | 2 | 15
+IMPORTS | 1 | 2 | 13
+EQ | 8 | 
+       EXP19_.EXP  =  B1 & !B7 & B5
+	# B1 & !B6 & B5
+	# B7 & B6 & XLXN_61
+	# B0 & B1 & !B7 & XLXN_58 & XLXN_61
+	# B0 & B1 & !B4 & XLXN_58 & XLXN_61
+;Imported pterms FB3_14
+	# !B0 & !B1 & !B7 & !B5 & XLXN_61
+	# B1 & B7 & !B6 & B4 & !XLXN_60 & !XLXN_64
+
+MACROCELL | 2 | 16 | EXP20_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 15
+INPUTS | 9 | B0  | B1  | B7  | XLXN_61  | XLXN_58  | B6  | B4  | B5  | EXP21_.EXP
+INPUTMC | 3 | 2 | 15 | 6 | 17 | 2 | 17
+INPUTP | 6 | 112 | 109 | 98 | 102 | 104 | 103
+EXPORTS | 1 | 2 | 15
+IMPORTS | 1 | 2 | 17
+EQ | 12 | 
+       EXP20_.EXP  =  !B0 & B1 & !B7 & !XLXN_61
+	# B1 & !B7 & !XLXN_58 & !XLXN_61
+	# !B0 & B1 & !B6 & !B4 & !XLXN_61
+	# B1 & !B6 & !B4 & !XLXN_58 & !XLXN_61
+	# !B1 & !B7 & !B5 & !XLXN_58 & XLXN_61
+;Imported pterms FB3_18
+	# B0 & !B1 & !B7 & !B5 & XLXN_58 & !XLXN_61
+	# B0 & !B1 & !B6 & !B4 & !B5 & XLXN_58 & !XLXN_61
+	# !B0 & !B1 & B7 & !B6 & B4 & !B5 & XLXN_64
+	# !B1 & B7 & !B6 & B4 & !B5 & !XLXN_60 & XLXN_64
+	# B0 & !B1 & B7 & !B6 & B4 & !B5 & XLXN_60 & 
+	!XLXN_64
+
+MACROCELL | 2 | 17 | EXP21_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 16
+INPUTS | 10 | B0  | B1  | B7  | B5  | XLXN_58  | XLXN_61  | B6  | B4  | XLXN_64  | XLXN_60
+INPUTMC | 4 | 6 | 17 | 2 | 15 | 1 | 15 | 6 | 15
+INPUTP | 6 | 112 | 109 | 98 | 103 | 102 | 104
+EXPORTS | 1 | 2 | 16
+EQ | 6 | 
+       EXP21_.EXP  =  B0 & !B1 & !B7 & !B5 & XLXN_58 & !XLXN_61
+	# B0 & !B1 & !B6 & !B4 & !B5 & XLXN_58 & !XLXN_61
+	# !B0 & !B1 & B7 & !B6 & B4 & !B5 & XLXN_64
+	# !B1 & B7 & !B6 & B4 & !B5 & !XLXN_60 & XLXN_64
+	# B0 & !B1 & B7 & !B6 & B4 & !B5 & XLXN_60 & 
+	!XLXN_64
+
+MACROCELL | 3 | 13 | EXP22_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 14
+INPUTS | 9 | B7  | B6  | B2  | B4  | B5  | B3  | XLXN_66  | XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+INPUTMC | 3 | 4 | 1 | 4 | 17 | 7 | 9
+INPUTP | 6 | 98 | 102 | 107 | 104 | 103 | 105
+EXPORTS | 1 | 3 | 14
+EQ | 6 | 
+       EXP22_.EXP  =  B7 & !B6 & B2 & B4 & !B5 & B3 & XLXN_66 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & B4 & !B5 & B3 & XLXN_66 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & B4 & !B5 & !B3 & XLXN_66 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+
+MACROCELL | 3 | 14 | EXP23_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 15
+INPUTS | 10 | B7  | B6  | B2  | B5  | B3  | XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2  | B4  | XLXN_66  | EXP22_.EXP
+INPUTMC | 4 | 4 | 17 | 7 | 9 | 4 | 1 | 3 | 13
+INPUTP | 6 | 98 | 102 | 107 | 103 | 105 | 104
+EXPORTS | 1 | 3 | 15
+IMPORTS | 1 | 3 | 13
+EQ | 17 | 
+       EXP23_.EXP  =  B7 & !B6 & B2 & B5 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & B5 & !B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B2 & B4 & B3 & !XLXN_66 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & B4 & B3 & !XLXN_66 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & B4 & !B3 & !XLXN_66 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+;Imported pterms FB4_14
+	# B7 & !B6 & B2 & B4 & !B5 & B3 & XLXN_66 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & B4 & !B5 & B3 & XLXN_66 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & B4 & !B5 & !B3 & XLXN_66 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+
+MACROCELL | 3 | 16 | EXP24_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 15
+INPUTS | 10 | B7  | B6  | B2  | B4  | B3  | XLXN_66  | XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D  | XLXN_63  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2  | EXP25_.EXP
+INPUTMC | 5 | 4 | 1 | 4 | 17 | 5 | 16 | 7 | 9 | 3 | 17
+INPUTP | 5 | 98 | 102 | 107 | 104 | 105
+EXPORTS | 1 | 3 | 15
+IMPORTS | 1 | 3 | 17
+EQ | 21 | 
+       EXP24_.EXP  =  B7 & !B6 & B2 & B4 & !B3 & !XLXN_66 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & B2 & !B4 & !B3 & !XLXN_63 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B2 & !B4 & B3 & !XLXN_63 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B4 & B3 & !XLXN_63 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B4 & !B3 & !XLXN_63 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+;Imported pterms FB4_18
+	# B7 & !B6 & B2 & !B4 & !B5 & B3 & XLXN_63 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B2 & B4 & !B5 & !B3 & XLXN_66 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B2 & !B4 & !B5 & !B3 & XLXN_63 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B4 & !B5 & B3 & XLXN_63 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B4 & !B5 & !B3 & XLXN_63 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+
+MACROCELL | 3 | 17 | EXP25_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 16
+INPUTS | 10 | B7  | B6  | B2  | B4  | B5  | B3  | XLXN_63  | XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D  | XLXN_66  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+INPUTMC | 4 | 5 | 16 | 4 | 17 | 4 | 1 | 7 | 9
+INPUTP | 6 | 98 | 102 | 107 | 104 | 103 | 105
+EXPORTS | 1 | 3 | 16
+EQ | 10 | 
+       EXP25_.EXP  =  B7 & !B6 & B2 & !B4 & !B5 & B3 & XLXN_63 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B2 & B4 & !B5 & !B3 & XLXN_66 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B2 & !B4 & !B5 & !B3 & XLXN_63 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B4 & !B5 & B3 & XLXN_63 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+	# B7 & !B6 & !B4 & !B5 & !B3 & XLXN_63 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D
+
+MACROCELL | 4 | 0 | EXP26_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 4 | 1
+INPUTS | 6 | B6  | B2  | B3  | XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D  | XLXI_8/U5/M0/XLXI_8/U5/M0_D2  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+INPUTMC | 3 | 4 | 17 | 0 | 16 | 7 | 9
+INPUTP | 3 | 102 | 107 | 105
+EXPORTS | 1 | 4 | 1
+EQ | 12 | 
+       EXP26_.EXP  =  B6 & B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# B6 & !B2 & B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# B6 & !B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# B6 & !B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	!XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# B6 & !B3 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+
+MACROCELL | 4 | 2 | EXP27_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 4 | 1
+INPUTS | 7 | B7  | B2  | B3  | XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D  | XLXI_8/U5/M0/XLXI_8/U5/M0_D2  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2  | EXP28_.EXP
+INPUTMC | 4 | 4 | 17 | 0 | 16 | 7 | 9 | 4 | 3
+INPUTP | 3 | 98 | 107 | 105
+EXPORTS | 1 | 4 | 1
+IMPORTS | 1 | 4 | 3
+EQ | 21 | 
+       EXP27_.EXP  =  !B7 & B2 & B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B2 & B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & B3 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	!XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B3 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+;Imported pterms FB5_4
+	# !B7 & B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	!XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+
+MACROCELL | 4 | 3 | EXP28_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 4 | 2
+INPUTS | 6 | B7  | B2  | B3  | XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D  | XLXI_8/U5/M0/XLXI_8/U5/M0_D2  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+INPUTMC | 3 | 4 | 17 | 0 | 16 | 7 | 9
+INPUTP | 3 | 98 | 107 | 105
+EXPORTS | 1 | 4 | 2
+EQ | 7 | 
+       EXP28_.EXP  =  !B7 & B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	!XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+
+MACROCELL | 4 | 9 | EXP29_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 4 | 8
+INPUTS | 11 | B0  | B1  | B7  | B6  | B4  | XLXN_64  | XLXN_60  | B5  | XLXN_61  | XLXN_58  | LED3_OBUF.EXP
+INPUTMC | 5 | 1 | 15 | 6 | 15 | 2 | 15 | 6 | 17 | 4 | 10
+INPUTP | 6 | 112 | 109 | 98 | 102 | 104 | 103
+EXPORTS | 1 | 4 | 8
+IMPORTS | 1 | 4 | 10
+EQ | 11 | 
+       EXP29_.EXP  =  !B0 & B1 & B7 & !B6 & B4 & !XLXN_64
+	# B1 & B7 & !B6 & B4 & !XLXN_60 & !XLXN_64
+	# !B0 & !B1 & B7 & !B6 & !B4 & !B5 & XLXN_61
+	# !B1 & B7 & !B6 & B4 & !B5 & !XLXN_60 & XLXN_64
+	# !B1 & B7 & !B6 & !B4 & !B5 & !XLXN_58 & XLXN_61
+;Imported pterms FB5_11
+	# !B0 & !B1 & B7 & !B6 & B4 & !B5 & XLXN_64
+	# B0 & !B1 & B7 & !B6 & B4 & !B5 & XLXN_60 & 
+	!XLXN_64
+	# B0 & !B1 & B7 & !B6 & !B4 & !B5 & XLXN_58 & 
+	!XLXN_61
+
+MACROCELL | 4 | 16 | EXP30_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 4 | 17
+INPUTS | 6 | B7  | B2  | B5  | XLXN_62  | B4  | XLXN_65
+INPUTMC | 2 | 4 | 14 | 4 | 13
+INPUTP | 4 | 98 | 107 | 103 | 104
+EXPORTS | 1 | 4 | 17
+EQ | 2 | 
+       EXP30_.EXP  =  !B7 & !B2 & !B5 & XLXN_62
+	# B7 & !B2 & B4 & !B5 & XLXN_65
+
+MACROCELL | 5 | 0 | EXP31_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 1
+INPUTS | 6 | B7  | data1  | DATA2  | B6  | B4  | XLXN_125
+INPUTMC | 3 | 5 | 4 | 5 | 1 | 0 | 0
+INPUTP | 3 | 98 | 102 | 104
+EXPORTS | 1 | 5 | 1
+EQ | 5 | 
+       EXP31_.EXP  =  !B7 & !data1 & DATA2
+	# !B6 & data1 & !DATA2
+	# !B6 & !data1 & DATA2
+	# !data1 & DATA2 & !B4
+	# !data1 & DATA2 & XLXN_125
+
+MACROCELL | 5 | 2 | EXP32_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 1
+INPUTS | 10 | B1  | B7  | B6  | B4  | B5  | XLXN_125  | B0  | XLXN_64  | XLXN_60  | EXP33_.EXP
+INPUTMC | 4 | 0 | 0 | 1 | 15 | 6 | 15 | 5 | 3
+INPUTP | 6 | 109 | 98 | 102 | 104 | 103 | 112
+EXPORTS | 1 | 5 | 1
+IMPORTS | 1 | 5 | 3
+EQ | 11 | 
+       EXP32_.EXP  =  B1 & B7 & B6 & B4 & B5 & !XLXN_125
+	# !B0 & B1 & B7 & B6 & B4 & !XLXN_64 & !XLXN_125
+	# B1 & B7 & B6 & B4 & !XLXN_60 & !XLXN_64 & 
+	!XLXN_125
+	# !B0 & !B1 & B7 & B6 & B4 & !B5 & XLXN_64 & 
+	!XLXN_125
+	# !B1 & B7 & B6 & B4 & !B5 & !XLXN_60 & XLXN_64 & 
+	!XLXN_125
+;Imported pterms FB6_4
+	# B0 & !B1 & B7 & B6 & B4 & !B5 & XLXN_60 & 
+	!XLXN_64 & !XLXN_125
+
+MACROCELL | 5 | 3 | EXP33_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 2
+INPUTS | 9 | B0  | B1  | B7  | B6  | B4  | B5  | XLXN_60  | XLXN_64  | XLXN_125
+INPUTMC | 3 | 6 | 15 | 1 | 15 | 0 | 0
+INPUTP | 6 | 112 | 109 | 98 | 102 | 104 | 103
+EXPORTS | 1 | 5 | 2
+EQ | 2 | 
+       EXP33_.EXP  =  B0 & !B1 & B7 & B6 & B4 & !B5 & XLXN_60 & 
+	!XLXN_64 & !XLXN_125
+
+MACROCELL | 5 | 5 | EXP34_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 4
+INPUTS | 8 | B0  | B7  | B6  | data1  | B4  | B5  | XLXN_60  | XLXN_125
+INPUTMC | 3 | 5 | 4 | 6 | 15 | 0 | 0
+INPUTP | 5 | 112 | 98 | 102 | 104 | 103
+EXPORTS | 1 | 5 | 4
+EQ | 4 | 
+       EXP34_.EXP  =  B0 & B7 & B6 & !data1 & B4 & !B5 & XLXN_60 & 
+	!XLXN_125
+	# !B0 & B7 & B6 & data1 & B4 & !B5 & XLXN_60 & 
+	!XLXN_125
+
+MACROCELL | 5 | 14 | EXP35_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 15
+INPUTS | 6 | B7  | B2  | B3  | XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D  | XLXI_8/U5/M0/XLXI_8/U5/M0_D2  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+INPUTMC | 3 | 4 | 17 | 0 | 16 | 7 | 9
+INPUTP | 3 | 98 | 107 | 105
+EXPORTS | 1 | 5 | 15
+EQ | 7 | 
+       EXP35_.EXP  =  !B7 & B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	!XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+
+MACROCELL | 5 | 15 | EXP36_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 16
+INPUTS | 7 | B6  | B2  | B3  | XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D  | XLXI_8/U5/M0/XLXI_8/U5/M0_D2  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2  | EXP35_.EXP
+INPUTMC | 4 | 4 | 17 | 0 | 16 | 7 | 9 | 5 | 14
+INPUTP | 3 | 102 | 107 | 105
+EXPORTS | 1 | 5 | 16
+IMPORTS | 1 | 5 | 14
+EQ | 20 | 
+       EXP36_.EXP  =  !B6 & B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B6 & !B2 & B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B6 & !B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B6 & !B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	!XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B6 & !B3 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+;Imported pterms FB6_15
+	# !B7 & B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B2 & !B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	!XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+
+MACROCELL | 5 | 17 | EXP37_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 16
+INPUTS | 6 | B7  | B2  | B3  | XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D  | XLXI_8/U5/M0/XLXI_8/U5/M0_D2  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+INPUTMC | 3 | 4 | 17 | 0 | 16 | 7 | 9
+INPUTP | 3 | 98 | 107 | 105
+EXPORTS | 1 | 5 | 16
+EQ | 13 | 
+       EXP37_.EXP  =  !B7 & B2 & B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B2 & B3 & 
+	!XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & !XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & B3 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & B3 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	!XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+	# !B7 & !B3 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2 & XLXI_1/XLXI_1/X2/XLXI_1/XLXI_1/X2_D & 
+	XLXI_8/U5/M0/XLXI_8/U5/M0_D2
+
+MACROCELL | 6 | 14 | EXP38_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 6 | 15
+INPUTS | 7 | B0  | B6  | B5  | B7  | XLXN_60  | XLXN_58  | B4
+INPUTMC | 2 | 6 | 15 | 6 | 17
+INPUTP | 5 | 112 | 102 | 103 | 98 | 104
+EXPORTS | 1 | 6 | 15
+EQ | 5 | 
+       EXP38_.EXP  =  B0 & B6 & B5
+	# B7 & !B6 & XLXN_60
+	# !B0 & !B7 & !B5 & XLXN_58
+	# B0 & B7 & B6 & B4 & !XLXN_60
+	# !B0 & B6 & !B4 & !B5 & XLXN_58
+
+MACROCELL | 6 | 16 | EXP39_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 6 | 17
+INPUTS | 7 | B0  | B6  | B5  | B7  | XLXN_58  | B4  | XLXN_60
+INPUTMC | 2 | 6 | 17 | 6 | 15
+INPUTP | 5 | 112 | 102 | 103 | 98 | 104
+EXPORTS | 1 | 6 | 17
+EQ | 5 | 
+       EXP39_.EXP  =  B0 & !B6 & B5
+	# B7 & B6 & XLXN_58
+	# B0 & !B6 & !B4 & !XLXN_58
+	# !B0 & !B7 & !B5 & XLXN_58
+	# !B0 & B7 & !B6 & B4 & !B5 & XLXN_60
+
+MACROCELL | 7 | 0 | EXP40_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 7 | 17
+INPUTS | 11 | B1  | B7  | B6  | B2  | B4  | B5  | XLXN_64  | XLXN_65  | XLXN_125  | XLXN_60  | B0
+INPUTMC | 4 | 1 | 15 | 4 | 13 | 0 | 0 | 6 | 15
+INPUTP | 7 | 109 | 98 | 102 | 107 | 104 | 103 | 112
+EXPORTS | 1 | 7 | 17
+EQ | 8 | 
+       EXP40_.EXP  =  B1 & B7 & B6 & !B2 & B4 & !B5 & XLXN_64 & 
+	!XLXN_65 & !XLXN_125
+	# B7 & B6 & !B2 & B4 & !B5 & !XLXN_60 & !XLXN_64 & 
+	XLXN_65 & !XLXN_125
+	# B0 & B1 & B7 & B6 & !B2 & B4 & !B5 & XLXN_60 & 
+	!XLXN_65 & !XLXN_125
+	# B0 & B7 & B6 & !B2 & B4 & !B5 & XLXN_60 & 
+	XLXN_64 & !XLXN_65 & !XLXN_125
+
+MACROCELL | 7 | 8 | EXP41_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 7 | 9
+INPUTS | 8 | B0  | B1  | B7  | B5  | XLXN_58  | B4  | XLXN_60  | XLXN_64
+INPUTMC | 3 | 6 | 17 | 6 | 15 | 1 | 15
+INPUTP | 5 | 112 | 109 | 98 | 103 | 104
+EXPORTS | 1 | 7 | 9
+EQ | 4 | 
+       EXP41_.EXP  =  B0 & B1 & !B7 & !B5 & XLXN_58
+	# B0 & B1 & !B4 & !B5 & XLXN_58
+	# B0 & B1 & B7 & B4 & !B5 & XLXN_60
+	# B0 & B7 & B4 & !B5 & XLXN_60 & XLXN_64
+
+MACROCELL | 7 | 10 | EXP42_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 7 | 11
+INPUTS | 10 | B7  | B6  | B2  | B4  | B5  | B3  | XLXN_65  | XLXN_66  | XLXN_125  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+INPUTMC | 4 | 4 | 13 | 4 | 1 | 0 | 0 | 7 | 9
+INPUTP | 6 | 98 | 102 | 107 | 104 | 103 | 105
+EXPORTS | 1 | 7 | 11
+EQ | 10 | 
+       EXP42_.EXP  =  B7 & B6 & B2 & B4 & !B5 & !B3 & XLXN_65 & 
+	!XLXN_66 & !XLXN_125
+	# B7 & B6 & !B2 & B4 & !B5 & !B3 & !XLXN_65 & 
+	XLXN_66 & !XLXN_125
+	# B7 & B6 & !B2 & B4 & !B5 & !B3 & XLXN_66 & 
+	!XLXN_125 & !XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & B4 & !B5 & !B3 & XLXN_65 & !XLXN_66 & 
+	!XLXN_125 & XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & B4 & !B5 & !B3 & !XLXN_65 & XLXN_66 & 
+	!XLXN_125 & !XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+
+MACROCELL | 7 | 11 | EXP43_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 7 | 12
+INPUTS | 11 | B7  | B6  | B2  | B4  | B3  | XLXN_66  | XLXN_125  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2  | XLXN_65  | B5  | EXP42_.EXP
+INPUTMC | 5 | 4 | 1 | 0 | 0 | 7 | 9 | 4 | 13 | 7 | 10
+INPUTP | 6 | 98 | 102 | 107 | 104 | 105 | 103
+EXPORTS | 1 | 7 | 12
+IMPORTS | 1 | 7 | 10
+EQ | 21 | 
+       EXP43_.EXP  =  B7 & B6 & B2 & B4 & !B3 & !XLXN_66 & !XLXN_125 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & !B2 & B4 & B3 & !XLXN_65 & !XLXN_66 & 
+	!XLXN_125
+	# B7 & B6 & B2 & B4 & !B5 & B3 & XLXN_65 & 
+	XLXN_66 & !XLXN_125
+	# B7 & B6 & B2 & B4 & !B5 & B3 & XLXN_66 & 
+	!XLXN_125 & XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & B4 & !B5 & B3 & XLXN_65 & XLXN_66 & 
+	!XLXN_125 & XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+;Imported pterms FB8_11
+	# B7 & B6 & B2 & B4 & !B5 & !B3 & XLXN_65 & 
+	!XLXN_66 & !XLXN_125
+	# B7 & B6 & !B2 & B4 & !B5 & !B3 & !XLXN_65 & 
+	XLXN_66 & !XLXN_125
+	# B7 & B6 & !B2 & B4 & !B5 & !B3 & XLXN_66 & 
+	!XLXN_125 & !XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & B4 & !B5 & !B3 & XLXN_65 & !XLXN_66 & 
+	!XLXN_125 & XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & B4 & !B5 & !B3 & !XLXN_65 & XLXN_66 & 
+	!XLXN_125 & !XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+
+MACROCELL | 7 | 12 | EXP44_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 7 | 13
+INPUTS | 12 | DATA4  | XLXN_125  | B7  | B6  | B2  | B4  | B5  | B3  | XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2  | XLXN_65  | XLXN_66  | EXP43_.EXP
+INPUTMC | 6 | 7 | 13 | 0 | 0 | 7 | 9 | 4 | 13 | 4 | 1 | 7 | 11
+INPUTP | 6 | 98 | 102 | 107 | 104 | 103 | 105
+EXPORTS | 1 | 7 | 13
+IMPORTS | 1 | 7 | 11
+EQ | 30 | 
+       EXP44_.EXP  =  DATA4 & XLXN_125
+	# B7 & B6 & !B2 & B4 & B5 & B3 & !XLXN_125
+	# B7 & B6 & B4 & B5 & B3 & !XLXN_125 & 
+	!XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & B2 & B4 & B5 & !B3 & !XLXN_125 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & B4 & B3 & !XLXN_65 & !XLXN_66 & 
+	!XLXN_125 & !XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+;Imported pterms FB8_12
+	# B7 & B6 & B2 & B4 & !B3 & !XLXN_66 & !XLXN_125 & 
+	XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & !B2 & B4 & B3 & !XLXN_65 & !XLXN_66 & 
+	!XLXN_125
+	# B7 & B6 & B2 & B4 & !B5 & B3 & XLXN_65 & 
+	XLXN_66 & !XLXN_125
+	# B7 & B6 & B2 & B4 & !B5 & B3 & XLXN_66 & 
+	!XLXN_125 & XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & B4 & !B5 & B3 & XLXN_65 & XLXN_66 & 
+	!XLXN_125 & XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+;Imported pterms FB8_11
+	# B7 & B6 & B2 & B4 & !B5 & !B3 & XLXN_65 & 
+	!XLXN_66 & !XLXN_125
+	# B7 & B6 & !B2 & B4 & !B5 & !B3 & !XLXN_65 & 
+	XLXN_66 & !XLXN_125
+	# B7 & B6 & !B2 & B4 & !B5 & !B3 & XLXN_66 & 
+	!XLXN_125 & !XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & B4 & !B5 & !B3 & XLXN_65 & !XLXN_66 & 
+	!XLXN_125 & XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+	# B7 & B6 & B4 & !B5 & !B3 & !XLXN_65 & XLXN_66 & 
+	!XLXN_125 & !XLXI_1/XLXI_1/XLXN_34/XLXI_1/XLXI_1/XLXN_34_D2
+
+MACROCELL | 7 | 15 | EXP45_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 7 | 14
+INPUTS | 10 | B7  | DATA3  | B6  | B4  | XLXN_125  | B1  | B2  | XLXN_64  | XLXN_65  | EXP46_.EXP
+INPUTMC | 5 | 7 | 14 | 0 | 0 | 1 | 15 | 4 | 13 | 7 | 16
+INPUTP | 5 | 98 | 102 | 104 | 109 | 107
+EXPORTS | 1 | 7 | 14
+IMPORTS | 1 | 7 | 16
+EQ | 36 | 
+       EXP45_.EXP  =  !B7 & DATA3
+	# !B6 & DATA3
+	# DATA3 & !B4
+	# DATA3 & XLXN_125
+	# B1 & B7 & B6 & B2 & B4 & XLXN_64 & XLXN_65 & 
+	!XLXN_125
+;Imported pterms FB8_17
+	# B7 & B6 & B2 & B4 & B5 & !XLXN_125
+	# !B0 & !B1 & B7 & B6 & B2 & B4 & !XLXN_65 & 
+	!XLXN_125
+	# !B0 & B7 & B6 & B2 & B4 & !XLXN_64 & !XLXN_65 & 
+	!XLXN_125
+	# !B1 & B7 & B6 & B2 & B4 & !XLXN_60 & !XLXN_65 & 
+	!XLXN_125
+	# !B1 & B7 & B6 & B2 & B4 & !XLXN_64 & !XLXN_65 & 
+	!XLXN_125
+;Imported pterms FB8_18
+	# B7 & B6 & B2 & B4 & !XLXN_60 & !XLXN_64 & 
+	!XLXN_65 & !XLXN_125
+	# !B0 & !B1 & B7 & B6 & !B2 & B4 & !B5 & XLXN_65 & 
+	!XLXN_125
+	# !B0 & B7 & B6 & !B2 & B4 & !B5 & !XLXN_64 & 
+	XLXN_65 & !XLXN_125
+	# !B1 & B7 & B6 & !B2 & B4 & !B5 & !XLXN_60 & 
+	XLXN_65 & !XLXN_125
+	# !B1 & B7 & B6 & !B2 & B4 & !B5 & !XLXN_64 & 
+	XLXN_65 & !XLXN_125
+;Imported pterms FB8_1
+	# B1 & B7 & B6 & !B2 & B4 & !B5 & XLXN_64 & 
+	!XLXN_65 & !XLXN_125
+	# B7 & B6 & !B2 & B4 & !B5 & !XLXN_60 & !XLXN_64 & 
+	XLXN_65 & !XLXN_125
+	# B0 & B1 & B7 & B6 & !B2 & B4 & !B5 & XLXN_60 & 
+	!XLXN_65 & !XLXN_125
+	# B0 & B7 & B6 & !B2 & B4 & !B5 & XLXN_60 & 
+	XLXN_64 & !XLXN_65 & !XLXN_125
+
+MACROCELL | 7 | 16 | EXP46_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 7 | 15
+INPUTS | 12 | B7  | B6  | B2  | B4  | B5  | XLXN_125  | B0  | B1  | XLXN_65  | XLXN_64  | XLXN_60  | EXP47_.EXP
+INPUTMC | 5 | 0 | 0 | 4 | 13 | 1 | 15 | 6 | 15 | 7 | 17
+INPUTP | 7 | 98 | 102 | 107 | 104 | 103 | 112 | 109
+EXPORTS | 1 | 7 | 15
+IMPORTS | 1 | 7 | 17
+EQ | 29 | 
+       EXP46_.EXP  =  B7 & B6 & B2 & B4 & B5 & !XLXN_125
+	# !B0 & !B1 & B7 & B6 & B2 & B4 & !XLXN_65 & 
+	!XLXN_125
+	# !B0 & B7 & B6 & B2 & B4 & !XLXN_64 & !XLXN_65 & 
+	!XLXN_125
+	# !B1 & B7 & B6 & B2 & B4 & !XLXN_60 & !XLXN_65 & 
+	!XLXN_125
+	# !B1 & B7 & B6 & B2 & B4 & !XLXN_64 & !XLXN_65 & 
+	!XLXN_125
+;Imported pterms FB8_18
+	# B7 & B6 & B2 & B4 & !XLXN_60 & !XLXN_64 & 
+	!XLXN_65 & !XLXN_125
+	# !B0 & !B1 & B7 & B6 & !B2 & B4 & !B5 & XLXN_65 & 
+	!XLXN_125
+	# !B0 & B7 & B6 & !B2 & B4 & !B5 & !XLXN_64 & 
+	XLXN_65 & !XLXN_125
+	# !B1 & B7 & B6 & !B2 & B4 & !B5 & !XLXN_60 & 
+	XLXN_65 & !XLXN_125
+	# !B1 & B7 & B6 & !B2 & B4 & !B5 & !XLXN_64 & 
+	XLXN_65 & !XLXN_125
+;Imported pterms FB8_1
+	# B1 & B7 & B6 & !B2 & B4 & !B5 & XLXN_64 & 
+	!XLXN_65 & !XLXN_125
+	# B7 & B6 & !B2 & B4 & !B5 & !XLXN_60 & !XLXN_64 & 
+	XLXN_65 & !XLXN_125
+	# B0 & B1 & B7 & B6 & !B2 & B4 & !B5 & XLXN_60 & 
+	!XLXN_65 & !XLXN_125
+	# B0 & B7 & B6 & !B2 & B4 & !B5 & XLXN_60 & 
+	XLXN_64 & !XLXN_65 & !XLXN_125
+
+MACROCELL | 7 | 17 | EXP47_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 7 | 16
+INPUTS | 12 | B7  | B6  | B2  | B4  | XLXN_60  | XLXN_64  | XLXN_65  | XLXN_125  | B0  | B1  | B5  | EXP40_.EXP
+INPUTMC | 5 | 6 | 15 | 1 | 15 | 4 | 13 | 0 | 0 | 7 | 0
+INPUTP | 7 | 98 | 102 | 107 | 104 | 112 | 109 | 103
+EXPORTS | 1 | 7 | 16
+IMPORTS | 1 | 7 | 0
+EQ | 19 | 
+       EXP47_.EXP  =  B7 & B6 & B2 & B4 & !XLXN_60 & !XLXN_64 & 
+	!XLXN_65 & !XLXN_125
+	# !B0 & !B1 & B7 & B6 & !B2 & B4 & !B5 & XLXN_65 & 
+	!XLXN_125
+	# !B0 & B7 & B6 & !B2 & B4 & !B5 & !XLXN_64 & 
+	XLXN_65 & !XLXN_125
+	# !B1 & B7 & B6 & !B2 & B4 & !B5 & !XLXN_60 & 
+	XLXN_65 & !XLXN_125
+	# !B1 & B7 & B6 & !B2 & B4 & !B5 & !XLXN_64 & 
+	XLXN_65 & !XLXN_125
+;Imported pterms FB8_1
+	# B1 & B7 & B6 & !B2 & B4 & !B5 & XLXN_64 & 
+	!XLXN_65 & !XLXN_125
+	# B7 & B6 & !B2 & B4 & !B5 & !XLXN_60 & !XLXN_64 & 
+	XLXN_65 & !XLXN_125
+	# B0 & B1 & B7 & B6 & !B2 & B4 & !B5 & XLXN_60 & 
+	!XLXN_65 & !XLXN_125
+	# B0 & B7 & B6 & !B2 & B4 & !B5 & XLXN_60 & 
+	XLXN_64 & !XLXN_65 & !XLXN_125
+
+PIN | B0 | 64 | 0 | N/A | 112 | 32 | 5 | 4 | 5 | 1 | 7 | 14 | 4 | 6 | 4 | 8 | 6 | 17 | 6 | 15 | 2 | 15 | 1 | 15 | 7 | 9 | 4 | 15 | 6 | 0 | 1 | 13 | 1 | 14 | 1 | 16 | 1 | 17 | 2 | 13 | 2 | 14 | 2 | 16 | 2 | 17 | 4 | 7 | 4 | 9 | 4 | 10 | 5 | 2 | 5 | 3 | 5 | 5 | 6 | 14 | 6 | 16 | 7 | 0 | 7 | 8 | 7 | 16 | 7 | 17
+PIN | B1 | 64 | 0 | N/A | 109 | 24 | 5 | 1 | 7 | 14 | 4 | 8 | 2 | 15 | 1 | 15 | 7 | 9 | 1 | 13 | 1 | 14 | 1 | 16 | 1 | 17 | 2 | 13 | 2 | 14 | 2 | 16 | 2 | 17 | 4 | 7 | 4 | 9 | 4 | 10 | 5 | 2 | 5 | 3 | 7 | 0 | 7 | 8 | 7 | 15 | 7 | 16 | 7 | 17
+PIN | B7 | 64 | 0 | N/A | 98 | 61 | 5 | 4 | 5 | 1 | 7 | 14 | 7 | 13 | 4 | 6 | 4 | 8 | 4 | 10 | 3 | 15 | 6 | 17 | 6 | 15 | 2 | 15 | 4 | 14 | 5 | 16 | 1 | 15 | 4 | 13 | 4 | 1 | 0 | 0 | 6 | 12 | 6 | 13 | 7 | 9 | 4 | 17 | 0 | 16 | 4 | 15 | 6 | 0 | 0 | 1 | 0 | 2 | 0 | 17 | 1 | 13 | 1 | 14 | 1 | 16 | 1 | 17 | 2 | 13 | 2 | 14 | 2 | 16 | 2 | 17 | 3 | 13 | 3 | 14 | 3 | 16 | 3 | 17 | 4 | 2 | 4 | 3 | 4 | 7 | 4 | 9 | 4 | 11 | 4 | 16 | 5 | 0 | 5 | 2 | 5 | 3 | 5 | 5 | 5 | 14 | 5 | 17 | 6 | 14 | 6 | 16 | 7 | 0 | 7 | 8 | 7 | 10 | 7 | 11 | 7 | 12 | 7 | 15 | 7 | 16 | 7 | 17
+PIN | B6 | 64 | 0 | N/A | 102 | 50 | 5 | 4 | 5 | 1 | 7 | 14 | 7 | 13 | 4 | 6 | 4 | 8 | 4 | 10 | 3 | 15 | 6 | 17 | 6 | 15 | 2 | 15 | 4 | 14 | 5 | 16 | 1 | 15 | 4 | 13 | 4 | 1 | 6 | 12 | 6 | 13 | 4 | 15 | 6 | 0 | 1 | 13 | 1 | 14 | 1 | 16 | 1 | 17 | 2 | 13 | 2 | 14 | 2 | 16 | 2 | 17 | 3 | 13 | 3 | 14 | 3 | 16 | 3 | 17 | 4 | 0 | 4 | 7 | 4 | 9 | 4 | 11 | 5 | 0 | 5 | 2 | 5 | 3 | 5 | 5 | 5 | 15 | 6 | 14 | 6 | 16 | 7 | 0 | 7 | 10 | 7 | 11 | 7 | 12 | 7 | 15 | 7 | 16 | 7 | 17
+PIN | B2 | 64 | 0 | N/A | 107 | 28 | 7 | 14 | 7 | 12 | 3 | 15 | 5 | 16 | 4 | 1 | 0 | 0 | 4 | 17 | 0 | 1 | 0 | 2 | 0 | 16 | 0 | 17 | 3 | 13 | 3 | 14 | 3 | 16 | 3 | 17 | 4 | 0 | 4 | 2 | 4 | 3 | 4 | 16 | 5 | 14 | 5 | 15 | 5 | 17 | 7 | 0 | 7 | 10 | 7 | 11 | 7 | 15 | 7 | 16 | 7 | 17
+PIN | DFF_CLK | 64 | 0 | N/A | 90 | 17 | 5 | 4 | 5 | 1 | 7 | 14 | 7 | 13 | 4 | 7 | 4 | 8 | 4 | 10 | 3 | 15 | 6 | 17 | 6 | 15 | 2 | 15 | 4 | 14 | 5 | 16 | 1 | 15 | 4 | 13 | 4 | 1 | 0 | 0
+PIN | B4 | 64 | 0 | N/A | 104 | 51 | 5 | 4 | 5 | 1 | 7 | 14 | 7 | 13 | 4 | 6 | 4 | 8 | 3 | 14 | 6 | 17 | 6 | 15 | 2 | 15 | 1 | 15 | 0 | 0 | 6 | 12 | 6 | 13 | 7 | 9 | 4 | 17 | 0 | 16 | 4 | 15 | 6 | 0 | 0 | 1 | 0 | 2 | 0 | 17 | 1 | 13 | 1 | 14 | 1 | 16 | 1 | 17 | 2 | 13 | 2 | 14 | 2 | 16 | 2 | 17 | 3 | 13 | 3 | 16 | 3 | 17 | 4 | 7 | 4 | 9 | 4 | 10 | 4 | 16 | 5 | 0 | 5 | 2 | 5 | 3 | 5 | 5 | 6 | 14 | 6 | 16 | 7 | 0 | 7 | 8 | 7 | 10 | 7 | 11 | 7 | 12 | 7 | 15 | 7 | 16 | 7 | 17
+PIN | B5 | 64 | 0 | N/A | 103 | 42 | 5 | 4 | 4 | 16 | 7 | 11 | 7 | 12 | 4 | 6 | 4 | 7 | 3 | 15 | 6 | 17 | 6 | 15 | 2 | 15 | 1 | 15 | 0 | 0 | 7 | 9 | 4 | 17 | 0 | 16 | 4 | 15 | 6 | 0 | 0 | 1 | 0 | 2 | 0 | 17 | 1 | 14 | 1 | 16 | 1 | 17 | 2 | 13 | 2 | 14 | 2 | 16 | 2 | 17 | 3 | 13 | 3 | 14 | 3 | 17 | 4 | 9 | 4 | 10 | 5 | 2 | 5 | 3 | 5 | 5 | 6 | 14 | 6 | 16 | 7 | 0 | 7 | 8 | 7 | 10 | 7 | 16 | 7 | 17
+PIN | B3 | 64 | 0 | N/A | 105 | 21 | 7 | 12 | 3 | 15 | 5 | 16 | 4 | 1 | 0 | 0 | 0 | 1 | 0 | 2 | 0 | 17 | 3 | 13 | 3 | 14 | 3 | 16 | 3 | 17 | 4 | 0 | 4 | 2 | 4 | 3 | 5 | 14 | 5 | 15 | 5 | 17 | 7 | 10 | 7 | 11 | 7 | 14
+PIN | TERM1 | 64 | 0 | N/A | 82 | 2 | 6 | 5 | 6 | 7
+PIN | data1 | 536871040 | 0 | N/A | 123
+PIN | DATA2 | 536871040 | 0 | N/A | 118
+PIN | DATA3 | 536871040 | 0 | N/A | 116
+PIN | DATA4 | 536871040 | 0 | N/A | 114
+PIN | LED1 | 536871040 | 0 | N/A | 62
+PIN | LED2 | 536871040 | 0 | N/A | 63
+PIN | LED3 | 536871040 | 0 | N/A | 64
+PIN | LED4 | 536871040 | 0 | N/A | 68
+PIN | TERM2 | 536871040 | 0 | N/A | 86
+PIN | TERM3 | 536871040 | 0 | N/A | 88

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.vhf</arg>&quot; line <arg fmt="%d" index="2">1359</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">RCO</arg>&apos; of component &apos;<arg fmt="%s" index="4">X74_161_MXILINX_FOURBIT</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.vhf</arg>&quot; line <arg fmt="%d" index="2">1375</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">RCO</arg>&apos; of component &apos;<arg fmt="%s" index="4">X74_161_MXILINX_FOURBIT</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.vhf</arg>&quot; line <arg fmt="%d" index="2">1391</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">RCO</arg>&apos; of component &apos;<arg fmt="%s" index="4">X74_161_MXILINX_FOURBIT</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.vhf</arg>&quot; line <arg fmt="%d" index="2">1407</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">RCO</arg>&apos; of component &apos;<arg fmt="%s" index="4">X74_161_MXILINX_FOURBIT</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.vhf</arg>&quot; line <arg fmt="%d" index="2">1048</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">OFL</arg>&apos; of component &apos;<arg fmt="%s" index="4">ADD4_MXILINX_FOURBIT</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXN_142</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+</messages>
+

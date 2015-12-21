@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE ibis [
+<!ELEMENT ibis (part, pin+)>
+<!ELEMENT part EMPTY>
+<!ELEMENT pin EMPTY>
+<!ATTLIST part
+  arch   CDATA #REQUIRED
+  device CDATA #REQUIRED
+  spg    CDATA #REQUIRED
+  pkg    CDATA #REQUIRED>
+<!ATTLIST pin
+  nm     CDATA #REQUIRED
+  no     CDATA #REQUIRED
+  iostd  (TTL|LVTTL|LVCMOS2|NA) "NA"
+  sr     (SLOW|FAST|slow|fast) "SLOW"
+  dir    (BIDIR|bidir|INPUT|input|OUTPUT|output) "BIDIR">
+]>
+<ibis><part arch="xc9500xl" device="XC95144XL" pkg="TQ100" spg="-10"/><pin dir="input" nm="B0" no="70"/><pin dir="input" nm="B1" no="68"/><pin dir="input" nm="B7" no="61"/><pin dir="input" nm="B6" no="63"/><pin dir="input" nm="B2" no="67"/><pin dir="input" nm="DFF_CLK" no="55"/><pin dir="input" nm="B4" no="65"/><pin dir="input" nm="B5" no="64"/><pin dir="input" nm="B3" no="66"/><pin dir="input" nm="TERM1" no="52"/><pin dir="output" nm="data1" no="76" sr="fast"/><pin dir="output" nm="DATA2" no="74" sr="fast"/><pin dir="output" nm="DATA3" no="72" sr="fast"/><pin dir="output" nm="DATA4" no="71" sr="fast"/><pin dir="output" nm="LED1" no="39" sr="fast"/><pin dir="output" nm="LED2" no="40" sr="fast"/><pin dir="output" nm="LED3" no="41" sr="fast"/><pin dir="output" nm="LED4" no="42" sr="fast"/><pin dir="output" nm="TERM2" no="53" sr="fast"/><pin dir="output" nm="TERM3" no="54" sr="fast"/></ibis>

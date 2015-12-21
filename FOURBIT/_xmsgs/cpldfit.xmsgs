@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Cpld" num="0" delta="new" >Unable to retrieve the path to the iSE Project Repository. Will use the default filename of &apos;<arg fmt="%s" index="1">FOURBIT.ise</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">DATA4_OBUF.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">DATA3_OBUF.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">DATA2_OBUF.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">data1_OBUF.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">LED4_OBUF.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">LED3_OBUF.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">LED2_OBUF.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">LED1_OBUF.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">XLXN_66.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">XLXN_65.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">XLXN_64.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">XLXN_60.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">XLXN_63.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">XLXN_62.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">XLXN_61.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">XLXN_58.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">XLXN_125.RSTF</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
+  The signal is removed.
+</msg>
+
+<msg type="warning" file="Cpld" num="896" delta="new" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">5</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">LED4</arg> to allow all signals assigned to this function block to be placed.
+</msg>
+
+</messages>
+

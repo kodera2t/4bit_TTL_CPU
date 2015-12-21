@@ -1,0 +1,97 @@
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9536-VQ44-5 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc9536-5-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+tsim -intstyle ise FOURBIT FOURBIT.nga 
+taengine -intstyle ise -f FOURBIT -w --format html1 -l FOURBIT_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n FOURBIT -i FOURBIT 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9536-VQ44-5 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc9536-5-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+tsim -intstyle ise FOURBIT FOURBIT.nga 
+hprep6 -s IEEE1149 -n FOURBIT -i FOURBIT 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9536-VQ44-5 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc9536-5-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9536-VQ44-5 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc9536-5-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572-PC44-7 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+tsim -intstyle ise FOURBIT FOURBIT.nga 
+hprep6 -s IEEE1149 -n FOURBIT -i FOURBIT 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9536-VQ44-7 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc9536-7-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9536-VQ44-7 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc9536-7-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9536-VQ44-7 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc9536-7-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9536-VQ44-7 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc9536-7-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9536-VQ44-7 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc9536-7-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9536-VQ44-7 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc9536-7-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9536-VQ44-7 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc9536-7-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc95144-TQ100-7 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc95144-7-TQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+tsim -intstyle ise FOURBIT FOURBIT.nga 
+hprep6 -s IEEE1149 -n FOURBIT -i FOURBIT 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc95144-TQ100-7 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc95144-7-TQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+tsim -intstyle ise FOURBIT FOURBIT.nga 
+hprep6 -s IEEE1149 -n FOURBIT -i FOURBIT 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9536-VQ44-10 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc9536-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc95144xl-TQ100-10 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+tsim -intstyle ise FOURBIT FOURBIT.nga 
+taengine -intstyle ise -f FOURBIT -w --format html1 -l FOURBIT_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n FOURBIT -i FOURBIT 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc95144xl-TQ100-10 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+tsim -intstyle ise FOURBIT FOURBIT.nga 
+hprep6 -s IEEE1149 -n FOURBIT -i FOURBIT 
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc FOURBIT.ucf -p xc95144xl-TQ100-10 FOURBIT.ngc FOURBIT.ngd  
+xst -intstyle ise -ifn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.xst" -ofn "C:/Users/kodera2t/Documents/CPLD_training/FOURBIT/FOURBIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc FOURBIT.ucf -p xc95144xl-TQ100-10 FOURBIT.ngc FOURBIT.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper FOURBIT.ngd 
+XSLTProcess FOURBIT_build.xml 
+tsim -intstyle ise FOURBIT FOURBIT.nga 
+hprep6 -s IEEE1149 -n FOURBIT -i FOURBIT 
